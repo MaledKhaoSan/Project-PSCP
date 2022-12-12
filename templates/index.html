@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>BANNDOKMAI</title>
+        <link rel="icon" type="image/png" sizes="16x16" href = "{{url_for('static', filename='IMG/F5.ng')}}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- //bootstrap font jquery -->
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+        <style>@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap');</style>
+        <!--* GSAP -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollToPlugin.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+        <script src="https://unpkg.com/gsap/dist/Observer.min.js"></script>
+        <!-- //Screenshot Script -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+      <script src="https://superal.github.io/canvas2image/canvas2image.js"></script>
+        <!-- CSS -->
+        <link rel="stylesheet" href="{{ url_for ('static', filename='CSS/MAIN.css') }}" >
+        <link rel="stylesheet" href="{{ url_for ('static', filename='CSS/ENTERsite.css') }}" >
+        <link rel="stylesheet" href="{{ url_for ('static', filename='CSS/RANDOMsite.css') }}" >
+        <link rel="stylesheet" href="{{ url_for ('static', filename='CSS/BOUQUETsite.css') }}" >
+        <link rel="stylesheet" href="{{ url_for ('static', filename='CSS/EMAILsite.css') }}" >
+
+        <!-- ICON -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@200&display=swap" rel="stylesheet">
+    </head>
+<body>
+
+      <!-- Enter Site -->
+      <section style="overflow: hidden; width: 100%; height: 100vh; position: relative; background-color: #272727;">
+        <!-- Introl -->
+        <section id="enter_site_introl" style="width: 100%; height: 100vh; position: absolute; background-color: #272727; z-index: 35;">
+          <div class="enter_heading">
+              <h2>PSIT PROJECT</h2>
+              <h1>BANNDOKMAI</h1>
+              <h3>are you the rose among the thorns when it comes to . .</h3>
+
+              <button onclick="enter_site_start()" type="button"><span>Enter</span></button>
+          </div>
+          <img class="element_background0" src = "{{url_for('static', filename='IMG/ENTER/background1.png')}}">
+          <img class="element_background1" src = "{{url_for('static', filename='IMG/ENTER/element5.png')}}">
+          <img class="element_background2" src = "{{url_for('static', filename='IMG/ENTER/element5.png')}}">
+          <section class="element_background3"></section>
+          <section class="element_background4"></section>
+          <img class="element1" src = "{{url_for('static', filename='IMG/ENTER/element1.png')}}">
+          <img class="element2" src = "{{url_for('static', filename='IMG/ENTER/element2.png')}}">
+          <img class="element3" src = "{{url_for('static', filename='IMG/ENTER/element3.png')}}">
+          <img class="element4" src = "{{url_for('static', filename='IMG/ENTER/element4.png')}}">
+          <img class="element6" src = "{{url_for('static', filename='IMG/ENTER/element6.png')}}">
+          <img class="element7" src = "{{url_for('static', filename='IMG/ENTER/element7.png')}}">
+          <img class="element8" src = "{{url_for('static', filename='IMG/ENTER/element8.png')}}">
+        </section>
+        <!-- Outrol -->
+        <section id="bouquet_site" style="width: 100%; height: 100vh; position: absolute; background-color: #272727; z-index: 34;">
+          <div class="bouquet_heading">
+              <h3>bouquet custom.</h3>
+              <button onclick="bouquet_start()" type="button"><span>Enter</span></button>
+          </div>
+          
+          <img class="bouquet_element1" src = "{{url_for('static', filename='IMG/BOUQUET/layer-1.png')}}">
+          <img class="bouquet_element2" src = "{{url_for('static', filename='IMG/BOUQUET/layer-2.png')}}">
+          <img class="bouquet_element3" src = "{{url_for('static', filename='IMG/BOUQUET/layer-3.png')}}">
+          <img class="bouquet_element4" src = "{{url_for('static', filename='IMG/BOUQUET/layer-4.png')}}">
+          <img class="bouquet_element5" src = "{{url_for('static', filename='IMG/BOUQUET/layer-5.png')}}">
+          <img class="bouquet_element6" src = "{{url_for('static', filename='IMG/BOUQUET/layer-6.png')}}">
+
+        </section>
+      </section>
+
+
+    <!--! Page: 1 Random flower -->
+    <section style="overflow: hidden; width: 100%; height: 100vh; position: relative; background-color: #ffffff;">
+      <section class="randoms_background">
+          <!-- >                         -->
+          <!-- >   Random Navbar Icon    -->
+          <!-- >                         -->
+        <div class="randoms_canvas">
+          <div id="random_form_layout" class="random_form" style="display: contents;">
+              <form name="random_form_content" style="z-index: 11;" action="{{ url_for("homepage")}}" method="post">
+                <div class="random_box">
+                  <input placeholder="( You )" id="username" name="username" autocomplete="off" type="text">
+                  <button onclick="random_flower_button()" class="random_heart" name="random_flower_submit" value="GET_SUMBIT" id="myRandomButton" class="button button1"><i class="fa-solid fa-heart fa-6x"></i></button>
+                  <input placeholder="( Who? )" id="receiver" name="receiver" autocomplete="off" type="text">
+                </div>
+              </form>
+          </div>
+
+          <!-- #change random_form style to none and random_smll_content style to contents# -->
+
+          <div id="random_result_layout" class="random_smll_content" style="display: none;">
+            <div class="random_smll_frame">
+              <img id="random_smll_img" src = "{{url_for('static', filename='IMG/RANDOMS/random_sunflower_smll.png')}}">
+              <div class="random_smll_text">
+                <div style="margin-top: 1.3em; column-gap: 1vh; grid-template-columns: 8vh 8vh 8vh; display: flex; -webkit-flex-direction: row; flex-direction: row; -webkit-align-items: center; align-items: center; -webkit-justify-content: center; justify-content: center;" >
+                  <h1 id="random_en" >Sunflower </h1><p id="random_th">ดอกทานตะวัน</p>
+                </div>
+                <h2 id="random_meaning">Adoration</h1>
+                <h3 id="random_submeaning">deep love and respect</h2>
+              </div>
+            </div>
+
+            <form action="{{ url_for("homepage")}}" method="post">
+              <div class="random_IconWrapper">
+                <a id="" onclick="random_flower_back()"><div class="icon"><span><i class="fa-solid fa-chevron-left"></i></span></div></a>
+                <button name="random_flower_repeat" value="REPEAT" id="myRandomButton" class="button button1"><a><div class="icon"><span><i class="fa-solid fa-arrows-rotate"></i></span></div></a>  </button>
+                <a id="" onclick="bouquet_navbar(this.id)"><div class="icon"><span><i class="fa-regular fa-bookmark"></i></span></div></a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- > End Random flowers -->
+
+    <!--! Page: 2 Custom Bouquet -->
+    <section style="overflow: hidden; width: 100%; height: 100vh; position: relative; background-color: #ffffff;">
+      <section class="bouquet_background">
+        <div class="bouquet_canvas">
+          <!-- >                       -->
+          <!-- >  Bouquet Navbar Icon  -->
+          <!-- >                       -->
+          <div class="bouquet_IconWrapper">
+            <a id="bouquet_mains_flowers" onclick="bouquet_navbar(this.id)">
+              <div class="icon"><span><i class="fa-solid fa-seedling"></i></span><p>flowers</p></div></a>
+            <a id="bouquet_mains_leaves" onclick="bouquet_navbar(this.id)">
+              <div class="icon"><span><i class="fa-solid fa-leaf"></i></span><p>leaves</p></div></a>
+            <a id="bouquet_mains_wrappers" onclick="bouquet_navbar(this.id)">
+              <div class="icon"><span><i class="fa-solid fa-box-open"></i></span><p>wrappers</p></div></a>
+          </div>
+          
+
+          <!-- >                           -->
+          <!-- >   Custom Bouquet Canvas   -->
+          <!-- >                           -->
+          <div style="z-index: -1;" id="bouquet_custom_canvas">
+              <!--| main flowers -->
+              <img style="z-index: 2;" id="main_flowers" src = "{{url_for('static', filename='IMG/BOUQUET/bouquet_main_redpop.png')}}">
+              <!--| main&minor decoration -->
+              <img style="z-index: 2;" class="bouquet_main_leaves bouquet_leavesSelect bouquet_main_leaves1" src = "{{url_for('static', filename='IMG/BOUQUET/bouquet_main_leaves1.png')}}">
+              <img style="z-index: 2;" class="bouquet_main_leaves" src = "">
+              <img style="z-index: 2;" class="bouquet_main_leaves" src = "">
+              <!--| main wrappers -->
+              <img style="z-index: 1;" id="bouquet_main_wrappers" src = "{{url_for('static', filename='IMG/BOUQUET/wrappersmain_1.png')}}">
+              <img style="z-index: 3;" id="bouquet_minor_wrappers" src = "{{url_for('static', filename='IMG/BOUQUET/wrappersminor_1.png')}}">
+            </div>
+          
+          <div class="bouquet_content">
+          <!-- >                           -->
+          <!-- >      Flowers Content      -->
+          <!-- >                           -->
+            <section id="bouquet_UxUi_content bouquet_mains_flowers" class="bouquet_UxUi_content bouquet_mains_flowers" style="display: none;">
+              <div class="bouquet_flowers">
+
+                <h1>Type</h1>
+                <div class="wrapper">
+                  <div><img id="bouquet_main_redpop" class="flower_active" onclick="bouquet_flowers(this.id)" src = "{{url_for('static', filename='IMG/BOUQUET/flower_icon2.png')}}"><h2>rose marry1</h2></div>
+                  <div><img id="bouquet_main_bluepop" class="" onclick="bouquet_flowers(this.id)" src = "{{url_for('static', filename='IMG/BOUQUET/flower_icon1.png')}}"><h2>rose marry2</h2></div>
+                  <div><img id="bouquet_main_yellowpop" class="" onclick="bouquet_flowers(this.id)" src = "{{url_for('static', filename='IMG/BOUQUET/flower_icon1.png')}}"><h2>rose marry3</h2></div>
+                  <div><img id="bouquet_main_meow" class="" onclick="bouquet_flowers(this.id)" src = "{{url_for('static', filename='IMG/BOUQUET/flower_icon1.png')}}"><h2>rose marry3</h2></div>
+                </div>
+              </div>
+  
+              <!--* Colors Collums -->
+              <div class="bouquet_colors">
+                <h1>Avaliable Color</h1>
+                <div class="wrapper bouquet_flowersColors bouquet_main_redpop">
+                  <div><div id="bouquet_main_redpop_red" class="color_active" onclick="bouquet_flowers_colors(this.id)" style="cursor: pointer; background-color:tomato;"></div></div>
+                  <div><div id="bouquet_main_redpop_white" class="" onclick="bouquet_flowers_colors(this.id)" style="cursor: pointer; background-color:rgb(255, 38, 0);"></div></div>
+                  <div><div id="bouquet_main_redpop_violet" class="" onclick="bouquet_flowers_colors(this.id)" style="cursor: pointer; background-color:rgb(222, 101, 235);"></div></div>
+                </div>
+
+
+                <div class="wrapper bouquet_flowersColors bouquet_main_bluepop" style="display: none;">
+                  <div><div onclick="" style="cursor: pointer; background-color:mediumslateblue;" class="color"></div></div>
+                  <div><div onclick="" style="cursor: pointer; background-color:mediumslateblue;" class="color"></div></div>
+                  <div><div onclick="" style="cursor: pointer; background-color:mediumslateblue;" class="color"></div></div>
+                </div>
+
+                <div class="wrapper bouquet_flowersColors bouquet_main_yellowpop" style="display: none;">
+                  <div><div onclick="" style="cursor: pointer; background-color:powderblue;" class="color"></div></div>
+                  <div><div onclick="" style="cursor: pointer; background-color:powderblue;" class="color"></div></div>
+                  <div><div onclick="" style="cursor: pointer; background-color:powderblue;" class="color"></div></div>
+                </div>
+              </div>
+  
+              <div class="bouquet_quantity">
+                <div class="heading">
+                  <h1> quantity</h1>
+                  <div class="management">
+                    <span id="bouquet_quantity_add" onclick="bouquet_flowers_quantity(this.id)" ><i class="fa-solid fa-plus"></i></span>
+                    <span id="bouquet_quantity_rem" onclick="bouquet_flowers_quantity(this.id)" ><i class="fa-solid fa-minus"></i></span>
+                  </div>
+                </div>
+                <div id="bouquet_quantity_amount" class="bouquet_quantity_tables">
+                  <h1 id="flowers_quantity_amount" ><i class="fa-brands fa-pagelines"></i></h1>
+                </div>
+              </div>
+            </section>
+          <!-- >                           -->
+          <!-- >      Leaves Content       -->
+          <!-- >                           -->
+            <section id="bouquet_UxUi_content bouquet_mains_leaves" class="bouquet_UxUi_content bouquet_mains_leaves" style="display: none;">
+              <div class="bouquet_flowers">
+                <h1>Type</h1>
+                <div class="wrapper">
+                  <div><img id="bouquet_main_leaves1" class="leaves_icons leaves_active" onclick="bouquet_leaves(this.id)" src = "{{url_for('static', filename='IMG/BOUQUET/flower_icon2.png')}}"><h2>Lily lie</h2></div>
+                  <div><img id="bouquet_main_leaves2" class="leaves_icons" onclick="bouquet_leaves(this.id)" src = "{{url_for('static', filename='IMG/BOUQUET/flower_icon2.png')}}"><h2>Lily lie</h2></div>
+                  <div><img id="bouquet_main_leaves3" class="leaves_icons" onclick="bouquet_leaves(this.id)" src = "{{url_for('static', filename='IMG/BOUQUET/flower_icon2.png')}}"><h2>Lily lie</h2></div>
+
+                  <div><img id="bouquet_main_leaves4" class="leaves_icons" onclick="bouquet_leaves(this.id)" src = "{{url_for('static', filename='IMG/BOUQUET/flower_icon2.png')}}"><h2>Lily lie</h2></div>
+                  <div><img id="bouquet_main_leaves5" class="leaves_icons" onclick="bouquet_leaves(this.id)" src = "{{url_for('static', filename='IMG/BOUQUET/flower_icon2.png')}}"><h2>Lily lie</h2></div>
+                  <div><img id="bouquet_main_leaves6" class="leaves_icons" onclick="bouquet_leaves(this.id)" src = "{{url_for('static', filename='IMG/BOUQUET/flower_icon2.png')}}"><h2>Lily lie</h2></div>
+
+                  <div><img id="bouquet_main_leaves7" class="leaves_icons" onclick="bouquet_leaves(this.id)" src = "{{url_for('static', filename='IMG/BOUQUET/flower_icon2.png')}}"><h2>Lily lie</h2></div>
+                  <div><img id="bouquet_main_leaves8" class="leaves_icons" onclick="bouquet_leaves(this.id)" src = "{{url_for('static', filename='IMG/BOUQUET/flower_icon2.png')}}"><h2>Lily lie</h2></div>
+                  <div><img id="bouquet_main_leaves9" class="leaves_icons" onclick="bouquet_leaves(this.id)" src = "{{url_for('static', filename='IMG/BOUQUET/flower_icon2.png')}}"><h2>Lily lie</h2></div>
+  
+                </div>
+              </div>
+              <!--* bouquet_quantity -->
+              <div class="bouquet_description">
+                <div class="heading">
+                  <h1> description</h1>
+                </div>
+
+                <div id="bouquet_description" class="bouquet_description_tables">
+                  <h2>SMYCKA Artificial flowers, indoor/outdoor/dogwood pink,56 cm.</h2>
+                </div>
+
+              </div>
+            </section>
+          <!-- >                            -->
+          <!-- >      Wrappers Content      -->
+          <!-- >                            -->
+            <section id="bouquet_UxUi_content bouquet_mains_wrappers" class="bouquet_UxUi_content bouquet_mains_wrappers" style="display: none;">
+                <div class="bouquet_flowers">
+    
+                  <h1>Type</h1>
+                  <div class="wrapper">
+                    <div><img id="wrappers_1" class="wrappers_active" onclick="bouquet_wrappers(this.id)" src = "{{url_for('static', filename='IMG/BOUQUET/flower_icon3.png')}}"><h2>rose marry1</h2></div>
+                    <div><img id="wrappers_2" class="" onclick="bouquet_wrappers(this.id)" src = "{{url_for('static', filename='IMG/BOUQUET/flower_icon3.png')}}"><h2>rose marry2</h2></div>
+                    <div><img id="wrappers_3" class="" onclick="bouquet_wrappers(this.id)" src = "{{url_for('static', filename='IMG/BOUQUET/flower_icon3.png')}}"><h2>rose marry3</h2></div>
+                    <div><img id="wrappers_4" class="" onclick="bouquet_wrappers(this.id)" src = "{{url_for('static', filename='IMG/BOUQUET/flower_icon3.png')}}"><h2>rose marry1</h2></div>
+                    <div><img id="wrappers_5" class="" onclick="bouquet_wrappers(this.id)" src = "{{url_for('static', filename='IMG/BOUQUET/flower_icon3.png')}}"><h2>rose marry2</h2></div>
+                    <div><img id="wrappers_6" class="" onclick="bouquet_wrappers(this.id)" src = "{{url_for('static', filename='IMG/BOUQUET/flower_icon3.png')}}"><h2>rose marry3</h2></div>
+                  </div>
+                </div>
+
+                <div class="bouquet_description">
+                  <div class="heading">
+                    <h1> description</h1>
+                  </div>
+  
+                  <div id="bouquet_wrappers_description" class="bouquet_description_tables">
+                    <h2>SMYCKA Artificial flowers, indoor/outdoor/dogwood pink,56 cm.</h2>
+                  </div>
+  
+                </div>
+            </section>
+            <div class="result_cost">
+              <h1> flower's custom bouquet</h1>
+              <div>
+                <h2>Total price <span style="float:right; margin-right: 3vh">182 bath</span></h2>
+              </div>
+              <button type="button"><span>ADD TO CART</span></button>
+            </div>
+          </div>
+          <!-- >                           -->
+          <!-- >      result items         -->
+          <!-- >                           -->
+          <!--* Result price -->
+          <div class="bouquet_items">
+            <h1>Selected Items</h1>
+            <div id="bouquet_items_boxs" class="collum">
+              <div><div class="box"><div id="items_main_flowers" class="insidebox"><img src = "{{url_for('static', filename='IMG/BOUQUET/flower_icon1.png')}}"><p1><p>Name: Lily</p> <p>Qlt: 1</p><p2 id="price">390 bath</p2></p1></div></div></div>
+              <div id="bouquet_main_leaves1 items_main_leaves"><div class="box"><div class="insidebox"><img src= "{{url_for('static', filename='IMG/BOUQUET/bouquet_main_leaves1_icon.png')}}"><p1><p>Name: brush1</p> <p>Qlt: 1</p><p2 id="price">390 bath</p2></p1></div></div></div>
+              <div><div class="box"><div id="items_main_wrappers" class="insidebox"><img src = "{{url_for('static', filename='IMG/BOUQUET/flower_icon1.png')}}"><p1><p>Name: Paper</p> <p>Qlt: 1</p><p2 id="price">40 bath</p2></p1></div></div></div>
+            </div>
+          </div>
+
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- > end -- Custom Bouquet -->
+
+
+    <!--! Page: 3 Emails flower -->
+    <section style="overflow: hidden; left: 0%; width: 100%; height: 100vh; position: relative; background-color: #ffffff;">
+      <section class="email_background">
+        <div class="email_canvas">
+          <!-- >                       -->
+          <!-- >     Email flower      -->
+          <!-- >                       -->
+          
+
+
+          
+          <div class="email_form_collum"> 
+            <div id="recipient" class="person-details">
+              <form action="{{ url_for("homepage")}}" method="post">
+                <header>
+                  <h1>Their details</h1>
+                </header>
+                <label for="name">
+                  Recipient
+                  full name
+                </label>
+                <input type="text" id="username_arrias" name="username_arrias" value="" class="recipient" maxlength="20"  placeholder="Full Name" required="" autocomplete="off" tabindex="1">
+                <label for="email">
+                  Recipient
+                  email
+                </label>
+                <input type="email" id="email_receiver" name="email_receiver" value="" class="recipient" placeholder="Email" required="">
+                <p class="terms">By providing details of the recipient you confirm they can be contacted.</p>
+                
+                <textarea type="textarea" id="user_message" name="user_message" class="recipient" placeholder="Your Message (don’t be shy)"></textarea>
+
+                <button name="custom_email_submit" value="GET_EMAIL" id="myRandomButton" class="button button1"> Submit</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="" style="  border-left: #1f1f1f solid; border-width: 0.07em;">
+            <div class="emails_flowers">
+              <h1>choose your flowers</h1>
+              <div class="wrapper">
+                <div><img id="" class=" leaves_active" onclick="bouquet_leaves(this.id)" src="/static/IMG/BOUQUET/flower_icon2.png"><h2>Lily lie</h2></div>
+                <div><img id="" class="" onclick="bouquet_leaves(this.id)" src="/static/IMG/BOUQUET/flower_icon2.png"><h2>Lily lie</h2></div>
+                <div><img id="" class="" onclick="bouquet_leaves(this.id)" src="/static/IMG/BOUQUET/flower_icon2.png"><h2>Lily lie</h2></div>
+
+                <div><img id="" class="" onclick="bouquet_leaves(this.id)" src="/static/IMG/BOUQUET/flower_icon2.png"><h2>Lily lie</h2></div>
+                <div><img id="" class="" onclick="bouquet_leaves(this.id)" src="/static/IMG/BOUQUET/flower_icon2.png"><h2>Lily lie</h2></div>
+                <div><img id="" class="" onclick="bouquet_leaves(this.id)" src="/static/IMG/BOUQUET/flower_icon2.png"><h2>Lily lie</h2></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="">
+            <img id="" class="emails_flowers_select" onclick="bouquet_leaves(this.id)" src="/static/IMG/BOUQUET/flower_icon2.png">
+          </div>
+          
+        
+        </div>
+        <br><br><br><br><br><br><br><br>
+      </section>
+    </section>
+    <!-- > End Emails flowers -->
+
+
+
+
+    <!-- GSAP Script-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    
+
+    <!-- Script Files -->
+    <script src="{{url_for('static', filename='JS/ENTER.js')}}"></script>
+    <script src="{{url_for('static', filename='JS/ANIMATED.js')}}"></script>
+    <script src="{{url_for('static', filename='JS/BOUQUETpage.js')}}"></script>
+
+    <!-- Random flowers Files -->
+    <script src="{{url_for('static', filename='JS/RANDOMpage.js')}}"></script>
+    <script src="{{url_for('static', filename='JS/capture.js')}}"></script>
+    <!-- Custom Email File -->
+    <script src="{{url_for('static', filename='JS/BOUQUETemail.js')}}"></script>
+</body>
+</html> 

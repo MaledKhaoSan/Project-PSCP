@@ -1,0 +1,109 @@
+    <section style="width: 100%; overflow: hidden;">
+        <h1 class="heading1">
+            Are you the rose,<br>
+            among the thorns<br>
+            when it comes to . .
+        </h1>
+        <article class="leftarticle">
+            <div>
+              <ul>
+                <li><img src = "{{url_for('static', filename='IMG/SLIDE/slide1.png')}}" style="display: block; width: 100%;"></li>
+                <li><img src = "{{url_for('static', filename='IMG/SLIDE/slide2.png')}}" style="display: block; width: 100%;"></li>
+                <li><img src = "{{url_for('static', filename='IMG/SLIDE/slide1.png')}}" style="display: block; width: 100%;"></li>
+                <li><img src = "{{url_for('static', filename='IMG/SLIDE/slide2.png')}}" style="display: block; width: 100%;"></li>
+                <li><img src = "{{url_for('static', filename='IMG/SLIDE/slide1.png')}}" style="display: block; width: 100%;"></li>
+              </ul>
+            </div>
+            <div>
+              <ul>
+                <li><img src = "{{url_for('static', filename='IMG/SLIDE/slide1.png')}}" style="display: block; width: 100%;"></li>
+                <li><img src = "{{url_for('static', filename='IMG/SLIDE/slide2.png')}}" style="display: block; width: 100%;"></li>
+                <li><img src = "{{url_for('static', filename='IMG/SLIDE/slide1.png')}}" style="display: block; width: 100%;"></li>
+                <li><img src = "{{url_for('static', filename='IMG/SLIDE/slide2.png')}}" style="display: block; width: 100%;"></li>
+                <li><img src = "{{url_for('static', filename='IMG/SLIDE/slide1.png')}}" style="display: block; width: 100%;"></li>
+              </ul>
+            </div>
+        </article>
+
+        <article class="rightarticle">
+            <div>
+              <ul>
+                <li><img src = "{{url_for('static', filename='IMG/SLIDE/slide1.png')}}" style="display: block; width: 100%;"></li>
+                <li><img src = "{{url_for('static', filename='IMG/SLIDE/slide2.png')}}" style="display: block; width: 100%;"></li>
+                <li><img src = "{{url_for('static', filename='IMG/SLIDE/slide1.png')}}" style="display: block; width: 100%;"></li>
+                <li><img src = "{{url_for('static', filename='IMG/SLIDE/slide2.png')}}" style="display: block; width: 100%;"></li>
+                <li><img src = "{{url_for('static', filename='IMG/SLIDE/slide1.png')}}" style="display: block; width: 100%;"></li>
+              </ul>
+            </div>
+            <div>
+              <ul>
+                <li><img src = "{{url_for('static', filename='IMG/SLIDE/slide1.png')}}" style="display: block; width: 100%;"></li>
+                <li><img src = "{{url_for('static', filename='IMG/SLIDE/slide2.png')}}" style="display: block; width: 100%;"></li>
+                <li><img src = "{{url_for('static', filename='IMG/SLIDE/slide1.png')}}" style="display: block; width: 100%;"></li>
+                <li><img src = "{{url_for('static', filename='IMG/SLIDE/slide2.png')}}" style="display: block; width: 100%;"></li>
+                <li><img src = "{{url_for('static', filename='IMG/SLIDE/slide1.png')}}" style="display: block; width: 100%;"></li>
+              </ul>
+            </div>
+        </article>
+    </section> 
+
+
+    <!-- ramdom My flower -->
+    <section id ="TweetMaxx"  style="overflow: hidden; width: 100%; height: 100vh; position: relative; background-color: #000000;">
+        <section>
+            <!-- element with absolute position -->
+            <div class="random_flower_content">
+
+                <!-- <div id="container">
+                    <div class="slide one"></div>
+                    <div class="slide two"></div>
+                    <div class="slide three"></div>
+                </div> -->
+
+                <div class="slide one"></div>
+                <div class="slide two"></div>
+                <div class="slide three"></div>
+            </div>
+        </section>  
+    </section>
+
+    <section class="Main-Section" style="position: relative;">
+
+        <div class="container" style="background-color: rgb(0, 0, 0);">
+            <form action="{{ url_for("homepage")}}" method="post">
+                <!-- <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="fname" placeholder="firstname">
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lname" placeholder="lastname">
+                <button type="submit">Login</button> -->
+            
+                <button id="myRandomButton" class="button button1">-ทดสอบ-</button>
+              </form>
+        </div>
+
+        <div class="container" style="background-color: rgb(207, 199, 255);">
+        
+        </div>
+    </section>
+
+
+
+<!-- Page: 2 Old Custom Bouquet -->
+<section id ="TweetMaxx"  style="overflow: hidden; width: 100%; height: 100vh; position: relative; background-color: #93b0b4;">
+  <!-- main canvas -->
+    <div class="bouquet_canvas screen_shot_class">
+      <img class="bouquet_custom1" src = "{{url_for('static', filename='IMG/BOUQUET/jasmine_orange-blossom_rose.png')}}">
+    </div>
+  <!-- other elements -->
+    <!-- <img class="bouquet_element6" src = "{{url_for('static', filename='IMG/BOUQUET/layer-6.png')}}"> -->
+    <!-- ปุ่ม submit -->
+    <div class="bouquet_heading">
+      <button onclick="bouquet_Screenshot()" type="button"><span>Capture</span></button>
+    </div>
+
+    <div class="bouquet_email">
+      <!-- <form action="{{ url_for("homepage")}}" method="post"> -->
+        <!-- <button onclick="bouquet_SendEmail()"><span>Send</span></button> -->
+      <!-- </form> -->
+    </div>
+</section>
