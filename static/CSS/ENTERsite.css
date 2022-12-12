@@ -1,0 +1,197 @@
+/* Enter Animation Fonts */
+@font-face {
+  font-family:'GalleryModern';
+  src: local('GalleryModern'), local('../FONT/GalleryModern'),
+      url('../FONT/GalleryModern.otf') format('opentype');
+}
+
+@font-face {
+  font-family:'Branch';
+  src: local('Branch'), local('../FONT/Branch'),
+      url('../FONT/Branch.otf') format('opentype');
+}
+
+@import url('https://fonts.cdnfonts.com/css/gill-sans');
+
+.enter_heading{
+  position: absolute;
+  width: 100%;
+  opacity: 1;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 16;
+  white-space: nowrap;
+}
+  .enter_heading h1{
+    font-family: "GalleryModern";
+    font-size: 12vh;
+    font-weight:lighter;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: #fff;
+  }
+
+  .enter_heading h2{
+    font-family:'Gill Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.5em;
+    text-align: center;
+    color: #fff;
+  }
+
+  .enter_heading h3{
+    font-family:'Branch';
+    font-size: 2.1vh;
+    font-weight: 100;
+    font-style: italic;
+    text-align: center;
+    color: #fff;
+  }
+
+  .enter_heading button{
+    font-family:'Branch';
+    font-size: 2.1vh;
+    line-height: 1em;
+    font-weight: 400;
+    font-style: italic;
+    text-align: center;
+    color: #1f1f1f;
+    background-color: #fff;
+    border-radius: 2.5em;
+    border: white solid;
+    cursor: pointer;
+    padding: 0 1.5em;
+    height: 2em;
+    margin: 2em auto 0;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+
+/* Enter Animation */
+.element_background0{
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 8;
+}
+.element_background1{
+  position: absolute;
+  width: 170%;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%,-50%);
+  z-index: 10;
+}
+.element_background2{
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 46%;
+  transform: translate(-50%,-50%) rotate(-5deg);
+  z-index: 9;
+}
+.element_background3{
+  z-index: 11;
+  width: 100%; 
+  height: 100vh; 
+  position: absolute; 
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0, 0, 0, 0.397) 100%);
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%,-50%);
+  opacity: 0;
+  
+}
+.element_background4{
+  z-index: 15; 
+  width: 100%; 
+  height: 100vh; 
+  position: absolute; 
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0, 0, 0, 0) 30%);
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%,-50%);
+  opacity: 0;
+  
+}
+
+
+.element1{
+  position: absolute;
+  width: 22.5%;
+  top: 25%;
+  left: 13%;
+  transform: translate(-50%,-50%) rotate(-11deg); /* rotate(-7deg) */
+  z-index: 12;
+}
+
+.element2{
+  position: absolute;
+  width: 27%;
+  top: 75%;
+  left: 65%;
+  transform: translate(-50%,-50%) rotate(-10deg); /* rotate(-7deg) */
+  z-index: 12;
+}
+
+.element3{
+  position: absolute;
+  width: 31%;
+  top: 75%;
+  left: 85%;
+  transform: translate(-50%,-50%) rotate(8deg); /* rotate(-7deg) */
+  z-index: 13;
+}
+
+.element4{
+  position: absolute;
+  width: 20%;
+  top: 75%;
+  left: 14%;
+  transform: translate(-50%,-50%) rotate(-3deg); /* rotate(-7deg) */
+  z-index: 12;
+}
+
+.element6{
+  position: absolute;
+  width: 28%;
+  top: 100%;
+  left: 36%;
+  transform: translate(-50%,-50%) rotate(11deg); /* rotate(-7deg) */
+  z-index: 12;
+}
+
+.element7{
+  position: absolute;
+  width: 25%;
+  top: 25%;
+  left: 41%;
+  transform: translate(-50%,-50%) rotate(4deg); /* rotate(-7deg) */
+  z-index: 12;
+}
+
+.element8{
+  position: absolute;
+  width: 20%;
+  top: 28%;
+  left: 84%;
+  transform: translate(-50%,-50%) rotate(0deg); /* rotate(-7deg) */
+  z-index: 12;
+}
