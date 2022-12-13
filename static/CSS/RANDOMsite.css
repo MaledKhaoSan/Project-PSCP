@@ -1,0 +1,374 @@
+/* Enter Animation Fonts */
+@font-face {
+  font-family:'GalleryModern';
+  src: local('GalleryModern'), local('../FONT/GalleryModern'),
+      url('../FONT/GalleryModern.otf') format('opentype');
+}
+
+@font-face {
+  font-family:'Branch';
+  src: local('Branch'), local('../FONT/Branch'),
+      url('../FONT/Branch.otf') format('opentype');
+}
+
+@import url('https://fonts.cdnfonts.com/css/gill-sans');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@200&display=swap');
+
+
+
+/* Enter random site */
+.random_element1{
+  position: absolute;
+  width: 43.5%;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%,-50%); /* rotate(-7deg) */
+  z-index: 12;
+}
+
+.random_element2{
+  position: absolute;
+  width: 9%;
+  top: 63.2%;
+  left: 23.2%;
+  transform: rotate(-31deg);
+  z-index: 12;
+}
+
+.random_element3{
+  position: absolute;
+  width: 14.5%;
+  top: 21.2%;
+  left: 30.2%;
+  transform: translate(-50%,-50%) rotate(57deg);
+  z-index: 13;
+}
+
+.random_element4{
+  position: absolute;
+  width: 10.3%;
+  top: 15%;
+  left: 64%;
+  transform: rotate(-48deg); /* rotate(-7deg) */
+  z-index: 10;
+}
+
+.random_element5{
+  position: absolute;
+  width: 11.56%;
+  top: 70%;
+  left: 78%;
+  transform: translate(-50%,-50%) rotate(20deg); /* rotate(-7deg) */
+  z-index: 13;
+}
+
+.random_element6{
+  position: absolute;
+  width: 9.48%;
+  top: 91%;
+  left: 57.54%;
+  transform: translate(-50%,-50%) rotate(-64deg); /* rotate(-7deg) */
+  z-index: 10;
+}
+
+.random_element7{
+  position: absolute;
+  width: 40%;
+  top: 5%;
+  left: 25%;
+  transform: rotate(-7deg); /* rotate(-7deg) */
+  z-index: 1;
+}
+
+
+/* custom bouquet */
+.randoms_background{
+  /* border: #1f1f1f solid;
+  border-width: 0.07em; */
+  overflow: hidden;
+  position: relative;
+  height: 90%;
+  align-items: center;
+  opacity: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 90%;
+  /* border-radius: 20px; */
+}
+
+.random_canvas{
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  /* max-height: fit-content; */
+  opacity: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+
+
+  /* border-radius: 20px; */
+  background-color: #ffffff;
+  /* background-image: linear-gradient(135deg,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 12%,rgba(255,255,255,0) 24%,rgba(255,255,255,.2637429971988795) 36%,rgba(255,255,255,1) 50%,rgba(255,255,255,.26376488095238093) 64%,rgba(255,255,255,0) 76%,rgba(255,255,255,0) 88%,rgba(255,255,255,0) 100%); */
+  /* background-image: linear-gradient(60deg, #e4f9f6 8%, #fff5e7 30%, #badbd7 60%); */
+  
+}
+
+
+
+/* canvas */
+
+.random_form {
+  position: absolute;
+  left: 50%;
+  top: 54%;
+  width: 54vh;
+  height: 80%;
+  transform: translate(-50%,-50%);
+  background-color: #ffffff;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 0 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
+  z-index: 5;
+}
+    .random_form form{
+      /* border: #1f1f1f solid;
+      border-width: 0.07em; */
+
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 100%;
+      height: 100%;
+      /* background-color: #994646; */
+      transform: translate(-50%,-50%);
+      z-index: 5;
+    }
+            
+            .random_heart {
+              display: flex;
+              background-color:rgba(255, 255, 255, 0);
+              border: rgba(255, 255, 255, 0) solid;
+              justify-content: center;
+              color: rgb(246, 98, 123);
+
+              margin: 0;
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              width: 90%;
+              /* height: 100%; */
+              transform: translate(-50%,-50%);
+            }
+
+            .random_box {
+              vertical-align: center;
+              position: relative;
+              left: 50%;
+              top: 50%;
+              width: 90%;
+              /* height: 100%; */
+              transform: translate(-50%,-50%);
+            }
+            .random_form form input{ /*.random_form_inner*/
+              border: 0;
+              background: none;
+              outline: none;
+              padding: 0;
+              margin: 0;
+              text-align: center;
+              align-items: center;
+              width: 100%;
+              cursor: text;
+              pointer-events: all;
+              -webkit-user-select: text;
+              -moz-user-select: text;
+              -ms-user-select: text;
+              user-select: text;
+              transition: all 0.3s ease;
+            }
+
+            .random_form form #username:hover,
+            .random_form form #receiver:hover{
+              font-size: 8rem;
+              /* margin: 10rem 0 6.2rem 0; */
+              /* color: #c91d1d; */
+            }
+
+            .random_invalid_check::placeholder{
+              color: #d84949;
+              /* font-weight: 400; */
+            }
+
+            .random_form form #username::placeholder,
+            .random_form form #receiver::placeholder{
+              transition: all 0.4s ease; 
+            }
+
+            .random_form form #username:hover::placeholder,
+            .random_form form #receiver:hover::placeholder{
+              /* font-size: 8rem; */
+              color: #1f1f1f58;
+              letter-spacing: 6vh;
+              padding-left: 52.5px;
+              align-content: center;
+              text-align: center;
+              justify-content: center;
+              
+            }
+            
+            .random_form  form input, /*.random_form_inner*/
+            .random_form  h2{
+                font-family: "GalleryModern";
+                font-size: 6.6rem;
+                font-weight: 100px;
+                text-align: center;
+                color: rgb(0, 0, 0);
+                left: auto;
+                margin: 8rem 0 6.2rem 0;
+            }
+
+.random_smll_content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 45vh;
+  height: 101%;
+  transform: translate(-50%,-50%);
+}
+    .random_smll_content img{
+      position: absolute;
+      left: 52%;
+      top: 43%;
+      width: 60vh;
+      height: 60vh;
+      transform: translate(-50%,-50%);
+    }
+    .random_smll_content .random_smll_frame{
+      position: absolute;
+
+      background-image: url('/static/IMG/RANDOMS/random_sunflower_bg.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      border-top-left-radius: 13em;
+      border-top-right-radius: 13em;
+      border: #1f1f1f solid;
+      border-width: 0.07em;
+      left: 50%;
+      top: 5%;
+      width: 39vh;
+      height: 63vh;
+      transform: translate(-50%, 0%);
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    }
+                .random_smll_content .random_smll_frame .random_smll_text{
+                    position: absolute;
+                    background-color: #ffffff;
+                    border: #1f1f1f solid;
+                    border-width: 0.07em;
+                    left: 50%;
+                    bottom: -1%;
+                    width: 39vh;
+                    height: auto;
+                    padding-bottom: 3vh;
+                    transform: translate(-50%, 0%);
+                }
+
+                .random_smll_content .random_smll_frame .random_smll_text h1,
+                .random_smll_content .random_smll_frame .random_smll_text h2{
+                    font-family: "GalleryModern";
+                    font-size: 2rem;
+                    font-weight: 100px;
+                    text-align: center;
+                    color: rgb(0, 0, 0);
+                    margin: 0 0 0 0;
+                }
+
+                .random_smll_content .random_smll_frame .random_smll_text h2{
+                  padding-top: 0.4em;
+              }
+
+                .random_smll_content .random_smll_frame .random_smll_text h3{
+                  font-family: 'Gill Sans', sans-serif;
+                  font-size: 1.4rem;
+                  font-weight: 100px;
+                  text-align: left;
+                  color: rgb(0, 0, 0);
+                  margin: 0 0 0 0;
+                  text-align: center;
+              }
+
+                .random_smll_content .random_smll_frame .random_smll_text p{
+                  font-family: 'Noto Sans Thai', sans-serif;
+                  line-height: 1.4em;
+                  font-size: 14px;
+                  font-weight: 100px;
+                  text-align: left;
+                  color: rgb(0, 0, 0);
+                  margin: 0 0 0 0;
+                }
+.random_bg_ceontent {
+    position: absolute;
+    background-color: rgba(255, 228, 196, 0.561);
+    border: #1f1f1f solid;
+    border-width: 0.07em;
+    overflow: hidden;
+    right: -1vh;
+    top: -1vh;
+    width: 40%;
+    height: 100vh;
+    transform: translate(0%, 0%);
+    z-index: -1;
+}
+.random_IconWrapper {
+  position: absolute;
+  border-top: #1f1f1f solid;
+  border-width: 0.07em;
+  padding: 1em 0 1em ;
+  background-color: #ffffff;
+
+  
+  left: 50%;
+  bottom: 0%;
+  width: 100%;
+  height: 8vh;
+  transform: translate(-50%,0%);
+  grid-template-columns: 8vh 8vh 8vh;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+      .random_IconWrapper a,
+      .random_IconWrapper button{
+        background-color: #00000000;
+        border: #00000000 solid;
+        color: #1f1f1f6c;
+        padding: 0 1.5em 0 1.5em;
+        margin: 0 0 0 0;
+      }
+              .random_IconWrapper .icon {
+                cursor: pointer;
+              }
+                      .random_IconWrapper .icon span {
+                        border: solid #1f1f1f;
+                        border-width:  0.07em;
+                        display: block;
+                        height: 40px;
+                        width: 40px;
+                        background: #fff;
+                        border-radius: 50%;
+                        z-index: 2;
+                        text-align: center;
+                      }
+                              .random_IconWrapper .icon span i {
+                                vertical-align: middle;
+                                height: 0em;
+                                font-size: 1.5rem;
+          
+                              }
