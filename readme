@@ -5,3 +5,5 @@ to install flask type
 
 $ pip install Flask twilio
 
+To run this project locally run 'main.py'
+and copy link from 'Running on https://xxxx(it should be 127.0.0.1:5000)'
