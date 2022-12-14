@@ -73,6 +73,17 @@ It should be like 127.0.0.1:5000 and use that address to access our site.
 We only try running it locally, So if you want to try deploy it somewhere good luck ;)
 
 Sorry professor.
-    
+
+
+## Built with
+* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+
+
+[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[Bootstrap-url]: https://getbootstrap.com
+
+
+
+
 
 
