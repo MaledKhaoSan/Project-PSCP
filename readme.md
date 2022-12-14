@@ -1,5 +1,5 @@
-# Project LANDOKMAI
-LANDOKMAI is not just a normal website
+# Project BBANDOKMAI
+BBANDOKMAI is not just a normal website
 It's a flower dictionary that will help you learn more about flower even just a bit
 
 ### Project report
@@ -15,7 +15,7 @@ It's a flower dictionary that will help you learn more about flower even just a 
 
 #Project setup
 
-<b>LANDOKMAI is running on Python 3.10 so if you have any trouble try Python 3.10</b>
+<b>BBANDOKMAI is running on Python 3.10 so if you have any trouble try Python 3.10</b>
  
 #<b>Environments</b>
 We strongly recommended to run this project under Python virtual environment
@@ -81,9 +81,3 @@ Sorry professor.
 
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
-
-
-
-
-
-
