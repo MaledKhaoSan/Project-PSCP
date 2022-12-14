@@ -1,6 +1,3 @@
-function bouquet_start() {
-    document.body.style.overflow = "scroll";
-}
 // Enter-Site-Introl
 ScrollTrigger.matchMedia({
     //Laptop
@@ -20,52 +17,30 @@ function bouquet_Screenshot(){
     });
 }
 
-
-// gsap.registerPlugin(Observer);
-// let setProp = gsap.quickSetter(".bouquet_custom1", "css"),
-//     getProp = gsap.getProperty(".bouquet_custom1");
-
-// Observer.create({
-//   target: ".bouquet_custom1",
-//   preventDefault: true,
-//   type: "pointer,touch",
-//   onPress(self) {
-//     self.elX = getProp("x"); // record the starting x/y of the element
-//     self.elY = getProp("y");
-//   },
-//   onDrag(self) {
-//     setProp({
-//         x: (self.elX + self.x - self.startX) + "px",  // apply the delta as measured from the onPress
-//         y: (self.elY + self.y - self.startY) + "px"
-//     });
-//   }
-// });
-
 //* Bouquet-UX/UI price data *//
 bouquet_elements_dataset = {
   'main_flowers': {
-    'bouquet_main_hydengea':['hydengea',  899, 'hydengea/blue/white/pink'],
-    'bouquet_main_sunflower':['sunflower', 659, 'sunflower/yellow'],
-    'bouquet_main_lisianthus':['lisianthus', 799, 'lisianthus/blue/white/pink/yellow']
+    'bouquet_main_hydengea':['Hydengea',  899, 'hydengea/blue/white/pink'],
+    'bouquet_main_sunflower':['Sunflower', 659, 'sunflower/yellow'],
+    'bouquet_main_lisianthus':['Lisianthus', 799, 'lisianthus/blue/white/pink/yellow']
   },
   'main_leaves': {
-    'bouquet_main_leaves1':['brush1', 390, 'SMYCKA artificial flowers, indoor/outdoor/dogwood pink,56 cm.'],
-    'bouquet_main_leaves2':['brush2', 690, 'SMYCKA artificial flowers, Lisianthus/pink,ดอกไม้ประดิษฐ์, ลิซิแอนธัส/ชมพู, 60 cm.60 ซม.'],
-    'bouquet_main_leaves3':['brush3', 590, 'SMYCKA artificial flowers, rose/red,15 cm.'],
-    'bouquet_main_leaves4':['brush4', 690, 'SMYCKA artificial flowers, rose/red,25 cm.'],
-    'bouquet_main_leaves5':['brush5', 590, 'SMYCKA artificial flowers, rose/red,35 cm.'],
-    'bouquet_main_leaves6':['brush6', 490, 'SMYCKA artificial flowers, rose/red,45 cm.'],
-    'bouquet_main_leaves7':['brush7', 30, 'SMYCKA artificial flowers, rose/red,55 cm.'],
-    'bouquet_main_leaves8':['brush8', 290, 'SMYCKA artificial flowers, rose/red,65 cm.'],
-    'bouquet_main_leaves9':['brush9', 120, 'SMYCKA artificial flowers, rose/red,85 cm.']
+    'Bouquet_minor_eucalyptus':['Eucalyptus', 149, 'artificial leaf, eucalyptus wood/green, 65 cm', 3],
+    'Bouquet_minor_ginkgo':['Ginkgo', 249, 'artificial flowers, ginkgo/green, 125 cm', 3],
+    'Bouquet_minor_babys_breath':[`Baby’s breath`, 99, `artificial flowers, baby's breath/white, 60 cm`, 3],
+    'Bouquet_minor_sweet_pea':['Sweet pea', 129, 'artificial flowers, sweet pea/white, 60 cm', 3],
+    
+    'Bouquet_minor_pascu':['Pascu', 149, 'artificial flowers, pascu/pink, 60 cm', 3],
+    'Bouquet_minor_cosmos':['Cosmos', 149, 'artificial flowers, cosmos/crimson, 65 cm', 2],
+    'Bouquet_minor_dogwood':['Dogwood', 79, 'artificial flowers, indoor/outdoor, dogwood/pink, 56 cm', 2],
+    'Bouquet_minor_cherry_blossoms':['Cherry-blossoms', 249, 'artificial flowers, cherry-blossoms/pink, 130 cm', 2],
+    'Bouquet_minor_lupin':['Lupin', 149, 'artificial flowers, lupin/white, 74 cm', 2],
+
   },
   'main_wrappers':{
-    'wrappers_1':['wrappers1', 123, 'Meow1 meow meow'],
-    'wrappers_2':['wrappers2', 223, 'Meow2 meow meow'],
-    'wrappers_3':['wrappers3', 323, 'Meow3 meow meow'],
-    'wrappers_4':['wrappers4', 423, 'Meow4 meow meow'],
-    'wrappers_5':['wrappers5', 523, 'Meow5 meow meow'],
-    'wrappers_6':['wrappers6', 623, 'Meow6 meow meow'],
+    'wrappers_default':['Default', 120, 'bouquet wrapping paper at a great price. Perfect for bouquet wrapping, floral crafting, gift wrappings, craft projects etc.'],
+    'wrappers_newspaper':['Newspaper', 223, '20 Sheets Flower Wrapping Paper Waterproof Florist Bouquet with Ribbon for Bouquets DIY Crafts Packaging Bouquet,'],
+    'wrappers_organic':['Organic', 323, 'Bridal bouquet with kale, succulent, helleborus, eucalyptus, hydrangea and dusty miller. Designed by Forget-Me-Not Flowers.'],
   }
 }
 
@@ -115,6 +90,7 @@ function bouquet_flowers(id) {
       price_ =  `${(bouquet_elements_dataset['main_flowers'][String(id)][1])} bath`
       document.getElementById('items_main_flowers').children[1].children[2].innerHTML = price_;
   }
+  sumPrice(0)
 }
 
 
@@ -172,6 +148,7 @@ function bouquet_flowers_quantity(id) {
       document.getElementById('items_main_flowers').children[1].children[2].innerHTML = price_;
     }
   }
+  sumPrice(0)
 }
 //> ---------------------------------------------------------------------
 //| ---------------------------------------|//
@@ -188,12 +165,12 @@ function bouquet_leaves(id) {
       //| ถ้าไม่มี class:'leaves_active' จะเพิ่ม'leaves_active' ไม่เกิน 3
       document.getElementById(id).classList.add("leaves_active");
           //| เปลี่ยนรูปที่ custom bouquet canvas
-          
-          
-          // // main_leaves_select = document.querySelector('bouquet_main_brush').classList.contains('bouquet_main_leaves')
           bouquet_leaves_select = (document.querySelector(".bouquet_main_leaves:not(.bouquet_leavesSelect)"))
           $(bouquet_leaves_select).show()
           bouquet_leaves_select.src = `static/IMG/BOUQUET/${id}.png`;
+          //| เปลี่ยน z-index(layer) ที่ custom bouquet canvas
+          layer_zindex = ((bouquet_elements_dataset['main_leaves'][String(id)][3]))
+          bouquet_leaves_select.style.zIndex = layer_zindex;
           bouquet_leaves_select.classList.add("bouquet_leavesSelect", id);
 
                   //| เปลี่ยนข้อมูลที่ description
@@ -220,8 +197,8 @@ function bouquet_leaves(id) {
                     $(bouquet_leaves_select).removeClass(`bouquet_leavesSelect ${id}`);
                             //| ลบค่า items_ammount
                             bouquet_leaves_select = document.getElementById(`${id} items_main_leaves`)
-                            bouquet_leaves_select.remove(); // Removes the div with the 'div-02' id
-                            // child.parentNode.removeChild(child);
+                            bouquet_leaves_select.remove(); 
+
   }
   bouquet_leaves_count = $('.leaves_active').length
   if (bouquet_leaves_count === 3){
@@ -229,9 +206,8 @@ function bouquet_leaves(id) {
     $(inactive).addClass('leaves_limits');
 
   }
+  sumPrice(0)
 }
-
-
 //| ---------------------------------------|//
 //| Bouquet-UX/UI Wrappers systems          |//
 //| Wrappers selected                      |//
@@ -255,15 +231,25 @@ function bouquet_wrappers(id) {
                   document.getElementById('bouquet_wrappers_description').children[0].innerHTML = description_;
 
       // //| เปลี่ยนรูปที่ icons items
-      // bouquet_main_icons = `static/IMG/BOUQUET/${id}_icon.png`
-      // document.getElementById('items_main_wrappers').children[0].src = bouquet_main_icons;
+      wrappers_main_icons = `static/IMG/BOUQUET/${id}_icons.png`
+      document.getElementById('items_main_wrappers').children[0].src = wrappers_main_icons;
+
       name_ = 'Name: ' + ((bouquet_elements_dataset['main_wrappers'][String(id)][0]))
       document.getElementById('items_main_wrappers').children[1].children[0].innerHTML = name_;
 
       quantity_ = (document.getElementById('items_main_wrappers').children[1].children[1]).innerHTML = 'Qlt: 1';
       price_ =  `${(bouquet_elements_dataset['main_wrappers'][String(id)][1])} bath`
       document.getElementById('items_main_wrappers').children[1].children[2].innerHTML = price_;
+  sumPrice(0)
   }
 }
 
-// console.log('hello worlddddddd lets go edok mfit')
+
+
+function sumPrice(get_resultPrice) {
+    document.querySelectorAll('#price').forEach(function(items) {
+      get_price = ((items.textContent).replace(/\D/g, ""))
+      get_resultPrice = get_resultPrice + Number(get_price)
+    });
+    document.getElementById('result_cost_innerHTML').innerHTML = `${get_resultPrice}`;
+}

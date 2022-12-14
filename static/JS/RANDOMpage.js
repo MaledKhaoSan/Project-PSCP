@@ -47,6 +47,8 @@ $('.random_box input').hover(
   function(){ $(this).removeClass('random_invalid_check') }
 )
 
+
+
 function random_flower_button() {
   var username_input = document.forms["random_form_content"]['username'].value;
   var receiver_input = document.forms["random_form_content"]['receiver'].value;
