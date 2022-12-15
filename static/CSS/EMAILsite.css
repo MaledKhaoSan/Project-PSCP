@@ -307,14 +307,12 @@
                           text-align: center;
                           /* color: rgb(0, 0, 0); */
                         }
-                /* .flower_active,
-                .leaves_active,
-                .wrappers_active{
+                .emails_active{
                   color: rgb(0, 0, 0);
                   border: solid #1f1f1f;
                   border-width: 0.1em;
 
-                } */
+                }
 .emails_flowers_select{
     /* padding: 17vh 0vh 3vh 0vh; */
     top: 50%;

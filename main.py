@@ -25,12 +25,6 @@ def homepage():
             user_message = request.form.get("user_message")
             email_flowers = request.form.get("email_flowers")
             sendCustomEmail(username_arrias, email_receiver, user_message, email_flowers)
-
-        # elif request.form.get('random_flower_submit') == 'GET_SUMBIT':
-        # # elif list(request.form.keys())[1] == 'random_flower_submit':
-        #     username = request.form.get("username")
-        #     receiver = request.form.get("receiver")
-        #     createRandomSortedList()
             
         elif request.form.get('random_flower_repeat') == 'REPEAT':
             createRandomSortedList()
@@ -43,20 +37,6 @@ def homepage():
 
     else:
         return render_template('index.html')
-
-
-
-
-
-
-@app.route('/emailtemplate', methods =["GET", "POST"])
-def emailtemplate():
-
-    return render_template("emailtemplate.html")
-        
-
-    
-
 if __name__ == '__main__':
     app.run(debug=True)
 

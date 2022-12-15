@@ -82,63 +82,6 @@
 }
 
 /* Enter Animation */
-
-
-
-.bouquet_element1{
-  position: absolute;
-  width: 22.5%;
-  top: 25%;
-  left: 13%;
-  transform: translate(-50%,-50%) rotate(-11deg); /* rotate(-7deg) */
-  z-index: 12;
-}
-
-.bouquet_element2{
-  position: absolute;
-  width: 27%;
-  top: 75%;
-  left: 65%;
-  transform: translate(-50%,-50%) rotate(-10deg); /* rotate(-7deg) */
-  z-index: 12;
-}
-
-.bouquet_element3{
-  position: absolute;
-  width: 31%;
-  top: 75%;
-  left: 85%;
-  transform: translate(-50%,-50%) rotate(8deg); /* rotate(-7deg) */
-  z-index: 13;
-}
-
-.bouquet_element4{
-  position: absolute;
-  width: 20%;
-  top: 75%;
-  left: 14%;
-  transform: translate(-50%,-50%) rotate(-3deg); /* rotate(-7deg) */
-  z-index: 12;
-}
-
-.bouquet_element5{
-  position: absolute;
-  width: 28%;
-  top: 100%;
-  left: 36%;
-  transform: translate(-50%,-50%) rotate(11deg); /* rotate(-7deg) */
-  z-index: 12;
-}
-
-.bouquet_element6{
-  position: absolute;
-  width: 25%;
-  top: 25%;
-  left: 41%;
-  transform: translate(-50%,-50%) rotate(4deg); /* rotate(-7deg) */
-  z-index: 12;
-}
-
 /* custom bouquet */
 .bouquet_background{
   border: #1f1f1f solid;
@@ -276,12 +219,14 @@
           top: 40%;
           transform: translate(-50%,-50%);
         }
-        /* .bouquet_custom_canvas .main_wrappers {
+        .bouquet_custom_canvas .main_wrappers {
+          left: 45%;
 
         }
         .bouquet_custom_canvas .minor_wrappers {
+          left: 45%;
 
-        } */
+        }
 
 .bouquet_content{
   overflow: hidden;
@@ -326,8 +271,6 @@
                   margin-left: auto;
                   margin-right: auto;
                   display: grid;
-                  /* border: #1f1f1f solid; */
-                  /* background-color: rgb(132, 198, 255); */
                   border-radius: 2em;
                   border-width: 0.1px;
                   grid-template-columns: 1fr 1fr 1fr;
@@ -558,7 +501,7 @@
           cursor: pointer;
           padding: 1.3em 4.5em;
           height: 2em;
-          margin: 3em 0vh;
+          margin: 2.5vh 0vh;
           position: absolute;
           left: 50%;
           transform: translate(-50%,-50%);

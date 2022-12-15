@@ -40,10 +40,6 @@ flower_dataset = {
         7:['Violet', 'ดอกไวโอเล็ต', 'Everlasting love', 'love that never comes to the end', 'purple' ]
       },
   }
-
-# print(flower_dataset['winter'][1][4])
-
-
 import random
 mycheck = 0
 arr = []
@@ -60,18 +56,6 @@ def createRandomSortedList(start = 1, end = 7):
 
     with open("./static/JSON/text.json", "w") as outfile:
       json.dump(random_flower_result, outfile)
-
-# createRandomSortedList()
-
-# def RandomCreateJSON():
-#   import json
-#   text = [1,2,3,4,5,6,7,8,]
-
-#   with open("./static/JSON/text.json", "w") as outfile:
-#     json.dump(text, outfile)
-# RandomCreateJSON()
-
-
 
 def createRandomWithInput(colors, seasons):
     new_dict = {}

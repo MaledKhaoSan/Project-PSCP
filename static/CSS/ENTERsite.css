@@ -13,7 +13,8 @@
 
 @import url('https://fonts.cdnfonts.com/css/gill-sans');
 
-.enter_heading{
+.enter_heading,
+.outrol_heading{
   position: absolute;
   width: 100%;
   opacity: 1;
@@ -23,7 +24,8 @@
   z-index: 16;
   white-space: nowrap;
 }
-  .enter_heading h1{
+  .enter_heading h1,
+  .outrol_heading h1{
     font-family: "GalleryModern";
     font-size: 12vh;
     font-weight:lighter;
@@ -31,6 +33,10 @@
     text-align: center;
     color: #fff;
   }
+  .outrol_heading h1{
+    font-size: 4vh;
+  }
+
 
   .enter_heading h2{
     font-family:'Gill Sans', sans-serif;
@@ -92,17 +98,16 @@
 .element_background1{
   position: absolute;
   width: 170%;
-  top: 50%;
-  left: 45%;
-  transform: translate(-50%,-50%);
+  top: -115%;
+  left: -38%;
   z-index: 10;
 }
 .element_background2{
   position: absolute;
   width: 80%;
-  top: 50%;
-  left: 46%;
-  transform: translate(-50%,-50%) rotate(-5deg);
+  top: -20%;
+  left: 5%;
+  transform: rotate(-5deg);
   z-index: 9;
 }
 .element_background3{
@@ -132,6 +137,24 @@
   
 }
 
+.element_background6{
+  opacity: 0;
+  position: absolute;
+  width: 15%;
+  top: 28%;
+  left: 43%;
+  transform: rotate(40deg);
+  z-index: 10;
+}
+
+.element_background5{
+  position: absolute;
+  width: 80%;
+  top: -40%;
+  left: 6%;
+  transform: rotate(15deg);
+  z-index: 9;
+}
 
 .element1{
   position: absolute;
@@ -181,17 +204,223 @@
 .element7{
   position: absolute;
   width: 25%;
-  top: 25%;
-  left: 41%;
-  transform: translate(-50%,-50%) rotate(4deg); /* rotate(-7deg) */
+  top: 0%;
+  left: 31%;
+  transform: rotate(4deg); /* rotate(-7deg) */
   z-index: 12;
 }
 
 .element8{
   position: absolute;
   width: 20%;
-  top: 28%;
-  left: 84%;
-  transform: translate(-50%,-50%) rotate(0deg); /* rotate(-7deg) */
+  top: 0%;
+  left: 74%;
+  transform: rotate(0deg); /* rotate(-7deg) */
   z-index: 12;
 }
+
+        
+.enter_site_element1{
+  position: absolute;
+  width: 0%;
+  top: 50%;
+  left: 50%;
+  z-index: 12;
+}
+
+.enter_site_element2{
+  position: absolute;
+  width: 0%;
+  top: 50%;
+  left: 50%;
+  z-index: 12;
+}
+
+.enter_site_element3{
+  position: absolute;
+  width: 0%;
+  top: 50%;
+  left: 50%;
+  z-index: 13;
+}
+
+.enter_site_element4{
+  position: absolute;
+  width: 0%;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+}
+
+.enter_site_element5{
+  position: absolute;
+  width: 0%;
+  top: 50%;
+  left: 50%;
+  z-index: 13;
+}
+
+.enter_site_element6{
+  position: absolute;
+  /* width: 9.48%; */
+  width: 0%;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+}
+
+.enter_site_element7{
+  position: absolute;
+  /* width: 40%; */
+  width: 0%;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+}
+
+
+.entersite_subheading{
+  opacity: 0;
+  z-index: 30;
+  text-align: center;
+  align-content: center;
+  margin: 0;
+  left: 50%;
+  bottom: 10%;
+  width: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+.entersite_subheading p{
+  font-family: "GalleryModern";
+  font-size: 1.13rem;
+  font-weight:lighter;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #1f1f1f;
+  z-index: 15;
+  line-height: 22px;
+  text-shadow: 0 2 30px rgb(255, 255, 255);
+}
+
+.entersite_subheading button{
+  font-family:'Branch';
+  font-size: 2.1vh;
+  line-height: 1em;
+  font-weight: 400;
+  font-style: italic;
+  text-align: center;
+  color: #1f1f1f;
+  background-color: #fff;
+  border: 2em #1f1f1f solid;
+  border-width: 0.1px;
+  border-radius: 3em;
+
+  cursor: pointer;
+  padding: 0 1.5em;
+  height: 2em;
+  margin: 2em auto 0;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 1;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.entersite_heading{
+  z-index: 30;
+  text-align: center;
+  align-content: center;
+  margin: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.entersite_heading h1{
+  opacity: 0;
+  font-family: "GalleryModern";
+  font-size: 5vh;
+  font-weight: 100;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #1f1f1f;
+  z-index: 15;
+  /* text-shadow: rgba(0, 0, 0, 0.239) 20px 0 10px;  */
+  /* -webkit-text-stroke: 0.6px black;
+  font-family: sans;
+  color: white; */
+}
+
+.leftside{
+  left: 8.5vh;
+  padding-left: 2vh;
+  cursor: pointer;
+}
+.rightside{
+  right: 8.5vh;
+  padding-right: 2vh;
+  cursor: pointer;
+
+}
+.entersite_IconWrapper {
+  opacity: 0;
+  row-gap: 5vh;
+  position: absolute;
+  align-content: center;
+  top: 50%;
+  transform: translate(0%,-50%);
+}
+
+.entersite_IconWrapper a{
+  color: #1f1f1f6c;
+}
+
+
+        .entersite_IconWrapper .icon {
+          margin: auto;
+          text-align: center;
+          cursor: pointer;
+          display: grid;
+          grid-template-columns: 1fr;
+          align-items: center;
+          justify-content: center;
+          /* flex-direction: column; */
+          position: relative;
+          z-index: 2;
+          transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+                .entersite_IconWrapper .icon span {
+                  border: solid #1f1f1f;
+                  border-width:  0.07em;
+                  display: block;
+                  height: 45px;
+                  width: 45px;
+                  background: #fff;
+                  border-radius: 50%;
+                  position: relative;
+                  z-index: 2;
+                  margin: auto;
+                }
+                        .entersite_IconWrapper .icon span i {
+                          height: 0em;
+                          margin-top: 0em;
+                          vertical-align: middle;
+                          font-size: 2rem;
+                        }
+        .entersite_IconWrapper .icon p {
+          font-family: "Herbert-regular";
+          font-size: 1.4rem;
+          font-weight: 600px;
+          text-align: center;
+          margin: 1em 0 0 0;
+          padding: 0em;
+          text-decoration: none;
+        }

@@ -1,10 +1,9 @@
 window.onload = function() {
 	if(!window.location.hash) {
-		window.location = window.location + '#PSIT';
+		window.location = window.location + '#Project-PSIT';
 		window.location.reload();
 	}
 }
-
 // Enter-Site-Introl
 ScrollTrigger.matchMedia({
     //Laptop
@@ -58,7 +57,7 @@ function enter_site_start() {
 		tl.to(".element_background5", 3.3,{left:"-160%",top:"-370%" ,scale:3.5, width:"440%",ease: Power1.easeIn},">")
 		tl.to(".element_background6", 1.6,{left:"-150%",top:"-299%", scale:1.5, width:"390%",ease: Power1.easeIn},"<")
 		tl.to("#enter_site_introl, .element_background6, .element_background5", 1.5,{opacity: 0},"<+1.2")
-		//Phase3
+		// Phase3
 		tl.to("#enter_site_introl", 0 ,{display: 'none'},">+0.1");
 
 

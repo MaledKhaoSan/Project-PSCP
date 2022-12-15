@@ -161,14 +161,16 @@
           <!-- >   Random Navbar Icon    -->
           <!-- >                         -->
         <div class="randoms_canvas">
+
           <div id="random_submit_content" style="display: none;">
             <div class="random_box">
               <form action="{{ url_for("homepage")}}" method="post">
               <input type="text" id="random_output" name="random_output" value="" style="display: none;">
-              <button class="random_submit_input" name="get_randomInput" value="GET_RANDOM_INPUT">Submit . . </button>
+              <button onclick="random_flower_sumbit()" class="random_submit_input" name="get_randomInput" value="GET_RANDOM_INPUT">Submit . . </button>
               </form>
             </div>
           </div>
+          
           <div id="random_form_layout" class="random_form">
               <div id="random_form_content" style="z-index: 11;">
                 <div class="random_box">
@@ -189,11 +191,10 @@
                 </div>
               </div>
 
-
               <div id="random_seasons_content"  style="z-index: 11; display: none;">
                 <div class="random_content_box">
                   <h2>What Season is<br>Your Heart in Today?</h2>
-                  <button id="summmer" onclick="random_get_seasons(this.id)" name="random_seasons_submit" value="GET_SUMBIT"><h3>Summer</h3></button>
+                  <button id="summer" onclick="random_get_seasons(this.id)" name="random_seasons_submit" value="GET_SUMBIT"><h3>Summer</h3></button>
                   <button id="spring" onclick="random_get_seasons(this.id)" name="random_seasons_submit" value="GET_SUMBIT"><h3>Spring</h3></button>
                   <button id="autumn" onclick="random_get_seasons(this.id)" name="random_seasons_submit" value="GET_SUMBIT"><h3>Autumn</h3></button>
                   <button id="winter" onclick="random_get_seasons(this.id)" name="random_seasons_submit" value="GET_SUMBIT"><h3>Winter</h3></button>
@@ -201,7 +202,7 @@
               </div>
               
 
-          </div>
+            </div>
 
           <div id="random_result_layout" class="random_smll_content" style="display: none;">
             <div id="random_bg_img" class="random_smll_frame">
@@ -218,8 +219,8 @@
             <form action="{{ url_for("homepage")}}" method="post">
               <div class="random_IconWrapper">
                 <a id="" onclick="random_flower_back()"><div class="icon"><span><i class="fa-solid fa-chevron-left"></i></span></div></a>
-                <button onclick="random_flower_repeated()" name="random_flower_repeat" value="REPEAT" class="button button1"><a><div class="icon"><span><i class="fa-solid fa-arrows-rotate"></i></span></div></a>  </button>
-                <a id="" onclick="bouquet_navbar(this.id)"><div class="icon"><span><i class="fa-regular fa-bookmark"></i></span></div></a>
+                <button onclick="random_flower_repeated()" name="random_flower_repeat" value="REPEAT" id="myRandomButton" class="button button1"><a><div class="icon"><span><i class="fa-solid fa-arrows-rotate"></i></span></div></a>  </button>
+                <a id="" ><div class="icon"><span><i class="fa-regular fa-bookmark"></i></span></div></a>
               </div>
             </form>
           </div>
@@ -424,13 +425,13 @@
                 <p class="terms">By providing details of the recipient you confirm they can be contacted.</p>
                 
                 <textarea type="textarea" id="user_message" name="user_message" class="recipient" placeholder="Your Message (don’t be shy)"></textarea>
-
+                <input type="text" id="email_flowers" name="email_flowers" value="" style="display: none;">
                 <button name="custom_email_submit" value="GET_EMAIL" id="myRandomButton" class="button button1"> Submit</button>
               </form>
             </div>
           </div>
 
-          <div class="" style="  border-left: #1f1f1f solid; border-width: 0.07em;">
+         <div class="" style="  border-left: #1f1f1f solid; border-width: 0.07em;">
             <div class="emails_flowers">
               <h1>choose your flowers</h1>
               <div class="wrapper">
@@ -441,13 +442,12 @@
                 <div><img id="lily" class="" onclick="bouquet_email_selected(this.id)" src="/static/IMG/EMAIL/email_lily_icon.png"><h2>Lily</h2></div>
                 <div><img id="orchid" class="" onclick="bouquet_email_selected(this.id)" src="/static/IMG/EMAIL/email_orchid_icon.png"><h2>Orchid</h2></div>
                 <div><img id="rose" class="" onclick="bouquet_email_selected(this.id)" src="/static/IMG/EMAIL/email_rose_icon.png"><h2>Rose</h2></div>
-                <input type="text" id="email_flowers" name="email_flowers" value="" style="display: none;">
               </div>
             </div>
           </div>
 
           <div class="">
-            <img id="email_flowers_bg_icons" class="emails_flowers_select" onclick="bouquet_leaves(this.id)" src="/static/IMG/EMAIL/email_hibiscus_icon.png">
+            <img id="email_flowers_bg_icon" class="emails_flowers_select" onclick="bouquet_leaves(this.id)" src="/static/IMG/EMAIL/email_hibiscus_icon.png">
           </div>
           
         

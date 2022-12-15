@@ -64,7 +64,6 @@ function random_flower_button() {
     },400)
   }
 }
-
 function random_get_colors(id){
   getColors = id
   $("#random_colors_content").fadeOut();
@@ -79,10 +78,11 @@ function random_get_seasons(id){
     setTimeout(function(){
       $("#random_submit_content").fadeIn("slow");
     },400)
+  document.getElementById("random_output").value = `${username_input} ${receiver_input} ${getColors} ${getSeasons} `;
+}
 
 
-  document.getElementById("random_output").value = `${username_input} ${receiver_input} ${getColors} ${getSeasons}`;
-
+function random_flower_sumbit(){
   let jsondata;
   fetch("./static/JSON/text.json").then(
     function(u){ return u.json();}
@@ -103,10 +103,21 @@ function random_get_seasons(id){
   setTimeout(function(){
     $("#random_result_layout").fadeIn("slow");
   },400)
+
 }
 
+
+
+
+function random_flower_back() {
+  $("#random_submit_content, #random_colors_content, #random_seasons_content, #random_result_layout").fadeOut();
+  setTimeout(function(){
+    $("#random_form_layout").fadeIn("slow");
+  },400)
+}
+
+
 function random_flower_repeated() {
-  let jsondata;
   fetch("./static/JSON/text.json").then(
     function(u){ return u.json();}
   ).then(
@@ -123,12 +134,3 @@ function random_flower_repeated() {
     }
   )
 }
-
-function random_flower_back() {
-  $("#random_result_layout").fadeOut();
-  setTimeout(function(){
-    $("#random_form_layout, .random_box").fadeIn("slow");
-  },400)
-}
-
-
