@@ -15,6 +15,27 @@ function bouquet_SendEmail() {
   // request.send();
 }
 
+
+
+//| ---------------------------------------|//
+//| Bouquet-UX/UI flowers systems          |//
+//| main Emails      ß                      |//
+//| ---------------------------------------|//
+function bouquet_email_selected(id) {
+  //| เช็คว่า main_flowers ยังไม่ได้ถูกเลือก
+  if ( !document.getElementById(id).classList.contains('emails_active') ){
+    //| ถ้าไม่มี class:'emails_active' จะเพิ่ม'emails_active' แทนที่
+    $('.emails_active').removeClass('emails_active');
+    document.getElementById(id).classList.add("emails_active");
+
+    //| เปลี่ยนรูปที่ custom emails canvas
+    bouquet_main_flowers = `static/IMG/BOUQUET/email_${id}_icons.png`
+    document.getElementById("email_flowers_bg_icons").src = bouquet_main_flowers;
+    //| เปลี่ยนค่า value flowers
+    document.getElementById("email_flowers").value = `${id}`;
+  }
+}
+
 // function addCode() {
 //   document.getElementById("add_to_me").insertAdjacentHTML("afterend","<h3>This is the text which has been inserted by JS</h3>");
 // }

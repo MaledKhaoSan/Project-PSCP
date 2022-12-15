@@ -17,13 +17,13 @@ $("#enter_site_introl").mousemove(function(_) {
   }
 
 
-  $("#RANDOM_ENTER_SITE").mousemove(function(_) {
-	parallaxIt(_, ".random_element2, .random_element3, .random_element4, .random_element5, .random_element6", -50);
-	parallaxIt(_, ".random_element1", +30);
-	parallaxIt(_, ".random_element7", -10);
+  $("#Enter_site_canvas").mousemove(function(_) {
+	parallaxIt(_, ".enter_site_element2, .enter_site_element3, .enter_site_element4, .enter_site_element5, .enter_site_element6", -50);
+	parallaxIt(_, ".enter_site_element1", +30);
+	parallaxIt(_, ".enter_site_element7", -10);
   });
   function parallaxIt(_, target, movement) {
-	var $this = $("#RANDOM_ENTER_SITE");
+	var $this = $("#Enter_site_canvas");
 	var relX = _.pageX - $this.offset().left;
 	var relY = _.pageY - $this.offset().top;
   
