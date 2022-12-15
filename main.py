@@ -23,33 +23,22 @@ def homepage():
             username_arrias = request.form.get("username_arrias")
             email_receiver = request.form.get("email_receiver")
             user_message = request.form.get("user_message")
-            print(username_arrias, email_receiver, user_message)
+            email_flowers = request.form.get("email_flowers")
+            sendCustomEmail(username_arrias, email_receiver, user_message, email_flowers)
 
-            # email_inerhtmlData = request.form['bouquet_email_submit']
-            # sendCustomEmail(email_inerhtmlData)
-
-        elif request.form.get('random_flower_submit') == 'GET_SUMBIT':
-        # elif list(request.form.keys())[1] == 'random_flower_submit':
-            username = request.form.get("username")
-            receiver = request.form.get("receiver")
-            createRandomSortedList()
+        # elif request.form.get('random_flower_submit') == 'GET_SUMBIT':
+        # # elif list(request.form.keys())[1] == 'random_flower_submit':
+        #     username = request.form.get("username")
+        #     receiver = request.form.get("receiver")
+        #     createRandomSortedList()
             
         elif request.form.get('random_flower_repeat') == 'REPEAT':
-            mytest = createRandomSortedList()
-            print(mytest[0])
+            createRandomSortedList()
 
-
-        
-
-            # SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
-            # _url = os.path.join(SITE_ROOT, "static/data", "taiwan.json")
-            # data = json.load(open(json_url))
-            # print(data)
-
-
-            # return render_template('index.html', value= mytest[0])
-            # return ('index.html', value= mytest[0]), 204
-            # return mytest[0]
+        elif request.form.get('get_randomInput') == 'GET_RANDOM_INPUT':
+            random_output = request.form.get("random_output")
+            myrandom_data = ((random_output).split())
+            createRandomWithInput(myrandom_data[2], myrandom_data[3])
         return (''), 204
 
     else:
