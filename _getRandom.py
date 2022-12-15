@@ -41,19 +41,39 @@ flower_dataset = {
       },
   }
 
+# print(flower_dataset['winter'][1][4])
+
+
 import random
 mycheck = 0
 arr = []
-# seasons, colors = 'winter','red'
-# new_dict = {}
-# new_dict["new_random"] = []
+def createRandomSortedList(start = 1, end = 7):
+    tmp = random.randint(start, end)
+          
+    while tmp in arr:
+      if len(arr) == 7:
+        arr.clear()
+      tmp = random.randint(start, end)
+    
+    random_flower_result = (flower_dataset['winter'][tmp])
+    arr.append(tmp)
 
-# for i in flower_dataset[seasons]:
-#     if flower_dataset[seasons][i][4] == colors:
-#         new_dict["new_random"].append (flower_dataset[seasons][i])
+    with open("./static/JSON/text.json", "w") as outfile:
+      json.dump(random_flower_result, outfile)
 
-def createRandomSortedList():
-    seasons, colors = 'summer','white'
+# createRandomSortedList()
+
+# def RandomCreateJSON():
+#   import json
+#   text = [1,2,3,4,5,6,7,8,]
+
+#   with open("./static/JSON/text.json", "w") as outfile:
+#     json.dump(text, outfile)
+# RandomCreateJSON()
+
+
+
+def createRandomWithInput(colors, seasons):
     new_dict = {}
     new_dict["new_random"] = []
 
@@ -68,21 +88,3 @@ def createRandomSortedList():
 
     with open("./static/JSON/text.json", "w") as outfile:
       json.dump(random_flower_result, outfile)
-
-createRandomSortedList()
-
-
-# for i in new_dict["new_random"]:
-#     print(new_dict)
-
-# createRandomSortedList()
-
-# createRandomSortedList()
-
-# def RandomCreateJSON():
-#   import json
-#   text = [1,2,3,4,5,6,7,8,]
-
-#   with open("./static/JSON/text.json", "w") as outfile:
-#     json.dump(text, outfile)
-# RandomCreateJSON()
