@@ -1,13 +1,19 @@
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>BANNDOKMAI</title>
-        <link rel="icon" type="image/png" sizes="16x16" href = "{{url_for('static', filename='IMG/F5.ng')}}">
+        <link rel="icon" type="image/png" sizes="16x16" href = "../Project-PSCP/static/IMG/F5.png">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- LOADING SCREEN -->
+        <script src="https://code.createjs.com/1.0.0/preloadjs.min.js"></script>
+
+        
         <!-- //bootstrap font jquery -->
-        <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
-        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
@@ -21,21 +27,27 @@
         <!-- //Screenshot Script -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
       <script src="https://superal.github.io/canvas2image/canvas2image.js"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
         <!-- CSS -->
-        <link rel="stylesheet" href="{{ url_for ('static', filename='CSS/MAIN.css') }}" >
-        <link rel="stylesheet" href="{{ url_for ('static', filename='CSS/ENTERsite.css') }}" >
-        <link rel="stylesheet" href="{{ url_for ('static', filename='CSS/RANDOMsite.css') }}" >
-        <link rel="stylesheet" href="{{ url_for ('static', filename='CSS/BOUQUETsite.css') }}" >
-        <link rel="stylesheet" href="{{ url_for ('static', filename='CSS/EMAILsite.css') }}" >
+        <link rel="stylesheet" href="../Project-PSCP/static/CSS/MAIN.css">
+        <link rel="stylesheet" href="../Project-PSCP/static/CSS/ENTERsite.css">
+        <link rel="stylesheet" href="../Project-PSCP/static/CSS/RANDOMsite.css">
+        <link rel="stylesheet" href="../Project-PSCP/static/CSS/BOUQUETsite.css">
+        <link rel="stylesheet" href="../Project-PSCP/static/CSS/EMAILsite.css">
 
         <!-- ICON -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
-
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@200&display=swap" rel="stylesheet">
     </head>
 <body>
+        <div id="loading-screen">
+          <div class="loader">
+              <h2>Loading...</h2>
+              <div id="loading-progress">0%</div>
+          </div>
+      </div>
 
       <!-- Enter Site -->
       <section id="Enter_site_canvas" style="overflow: hidden; width: 100%; height: 100vh; position: relative; background-color: #ffffff;">
@@ -48,22 +60,22 @@
 
               <button onclick="enter_site_start()" type="button"><span>Enter</span></button>
           </div>
-          <img class="element_background5" src = "{{url_for('static', filename='IMG/ENTER/element5.png')}}">
-          <img class="element_background6" src = "{{url_for('static', filename='IMG/ENTER/element5.png')}}">
+          <img class="element_background5" src = "../Project-PSCP/static/IMG/ENTER/element5.png">
+          <img class="element_background6" src = "../Project-PSCP/static/IMG/ENTER/element5.png">
 
-          <img class="element_background0" src = "{{url_for('static', filename='IMG/ENTER/background1.png')}}">
-          <img class="element_background1" src = "{{url_for('static', filename='IMG/ENTER/element5.png')}}">
-          <img class="element_background2" src = "{{url_for('static', filename='IMG/ENTER/element5.png')}}">
+          <img class="element_background0" src = "../Project-PSCP/static/IMG/ENTER/background1.png">
+          <img class="element_background1" src = "../Project-PSCP/static/IMG/ENTER/element5.png">
+          <img class="element_background2" src = "../Project-PSCP/static/IMG/ENTER/element5.png">
           <section class="element_background3"></section>
           <section class="element_background4"></section>
 
-          <img class="element1" src = "{{url_for('static', filename='IMG/ENTER/element1.png')}}">
-          <img class="element2" src = "{{url_for('static', filename='IMG/ENTER/element2.png')}}">
-          <img class="element3" src = "{{url_for('static', filename='IMG/ENTER/element3.png')}}">
-          <img class="element4" src = "{{url_for('static', filename='IMG/ENTER/element4.png')}}">
-          <img class="element6" src = "{{url_for('static', filename='IMG/ENTER/element6.png')}}">
-          <img class="element7" src = "{{url_for('static', filename='IMG/ENTER/element7.png')}}">
-          <img class="element8" src = "{{url_for('static', filename='IMG/ENTER/element8.png')}}">
+          <img class="element1" src = "../Project-PSCP/static/IMG/ENTER/element1.png">
+          <img class="element2" src = "../Project-PSCP/static/IMG/ENTER/element2.png">
+          <img class="element3" src = "../Project-PSCP/static/IMG/ENTER/element3.png">
+          <img class="element4" src = "../Project-PSCP/static/IMG/ENTER/element4.png">
+          <img class="element6" src = "../Project-PSCP/static/IMG/ENTER/element6.png">
+          <img class="element7" src = "../Project-PSCP/static/IMG/ENTER/element7.png">
+          <img class="element8" src = "../Project-PSCP/static/IMG/ENTER/element8.png">
 
           <div class="outrol_heading" style="z-index: 1;">
             <h1>the language of flowers</h1>
@@ -88,13 +100,13 @@
               <p>IN SPRING, THE COLORS BECOME BRIGHTER, THE WORLD AROUND IS RENEWED AND BLOOMS. SAY IMPORTANT WORDS TO A DEAR AND CLOSE PERSON: SEND A POSTCARD WITH A BRIGHT WISH AND AN UNUSUAL BOUQUET AND GIVE A SPRING MOOD.</p>
               <button id="random_content_selected" onclick="content_selector(this.id)" type="button"><span>Enter</span></button>
           </div>
-          <img class="enter_site_element1" src = "{{url_for('static', filename='IMG/RANDOMS/INTROL/random_entersite1.png')}}">
-          <img class="enter_site_element2" src = "{{url_for('static', filename='IMG/RANDOMS/INTROL/random_entersite2.png')}}">
-          <img class="enter_site_element3" src = "{{url_for('static', filename='IMG/RANDOMS/INTROL/random_entersite3.png')}}">
-          <img class="enter_site_element4" src = "{{url_for('static', filename='IMG/RANDOMS/INTROL/random_entersite4.png')}}">
-          <img class="enter_site_element5" src = "{{url_for('static', filename='IMG/RANDOMS/INTROL/random_entersite7.png')}}">
-          <img class="enter_site_element6" src = "{{url_for('static', filename='IMG/RANDOMS/INTROL/random_entersite8.png')}}">
-          <img class="enter_site_element7" src = "{{url_for('static', filename='IMG/RANDOMS/INTROL/random_entersite5.png')}}">
+          <img class="enter_site_element1" src = "../Project-PSCP/static/IMG/RANDOMS/INTROL/random_entersite1.png">
+          <img class="enter_site_element2" src = "../Project-PSCP/static/IMG/RANDOMS/INTROL/random_entersite2.png">
+          <img class="enter_site_element3" src = "../Project-PSCP/static/IMG/RANDOMS/INTROL/random_entersite3.png">
+          <img class="enter_site_element4" src = "../Project-PSCP/static/IMG/RANDOMS/INTROL/random_entersite4.png">
+          <img class="enter_site_element5" src = "../Project-PSCP/static/IMG/RANDOMS/INTROL/random_entersite7.png">
+          <img class="enter_site_element6" src = "../Project-PSCP/static/IMG/RANDOMS/INTROL/random_entersite8.png">
+          <img class="enter_site_element7" src = "../Project-PSCP/static/IMG/RANDOMS/INTROL/random_entersite5.png">
         </section>
         <!--* Bouquet Enter site -->
         <section id="BOUQUET_ENTER_SITE" style="width: 100%; height: 100vh; position: absolute; background-color: #ffffff; z-index: 34; display: none;">
@@ -115,13 +127,13 @@
               <p>LOVED ONES ARE OUT OF REACH AND SOME THOUGHTS ARE HARD TO SAY. THANK HEAVENS FOR FLORIOGRAPHY AND BOUQUETS FULL OF MEANING PENHALIGON’S INVITES YOU TO SEND A COMPLIMENTARY GIFT AND A DIGITAL FLORAL BOUQUET, TO A LOVED ONE WHO FEELS OH SO FAR AWAY.</p>
               <button id="bouquet_content_selected" onclick="content_selector(this.id)" type="button"><span>Enter</span></button>
           </div>
-          <img class="enter_site_element1" src = "{{url_for('static', filename='IMG/BOUQUET/INTROL/bouquet_entersite1.png')}}">
-          <img class="enter_site_element2" src = "{{url_for('static', filename='IMG/RANDOMS/INTROL/random_entersite2.png')}}">
-          <img class="enter_site_element3" src = "{{url_for('static', filename='IMG/RANDOMS/INTROL/random_entersite3.png')}}">
-          <img class="enter_site_element4" src = "{{url_for('static', filename='IMG/RANDOMS/INTROL/random_entersite4.png')}}">
-          <img class="enter_site_element5" src = "{{url_for('static', filename='IMG/RANDOMS/INTROL/random_entersite7.png')}}">
-          <img class="enter_site_element6" src = "{{url_for('static', filename='IMG/RANDOMS/INTROL/random_entersite8.png')}}">
-          <img class="enter_site_element7" src = "{{url_for('static', filename='IMG/RANDOMS/INTROL/random_entersite5.png')}}">
+          <img class="enter_site_element1" src = "../Project-PSCP/static/IMG/BOUQUET/INTROL/bouquet_entersite1.png">
+          <img class="enter_site_element2" src = "../Project-PSCP/static/IMG/RANDOMS/INTROL/random_entersite2.png">
+          <img class="enter_site_element3" src = "../Project-PSCP/static/IMG/RANDOMS/INTROL/random_entersite3.png">
+          <img class="enter_site_element4" src = "../Project-PSCP/static/IMG/RANDOMS/INTROL/random_entersite4.png">
+          <img class="enter_site_element5" src = "../Project-PSCP/static/IMG/RANDOMS/INTROL/random_entersite7.png">
+          <img class="enter_site_element6" src = "../Project-PSCP/static/IMG/RANDOMS/INTROL/random_entersite8.png">
+          <img class="enter_site_element7" src = "../Project-PSCP/static/IMG/RANDOMS/INTROL/random_entersite5.png">
         </section>
         <!--* Custom email Enter site -->
         <section id="EMAIL_ENTER_SITE" style="width: 100%; height: 100vh; position: absolute; background-color: #ffffff; z-index: 34; display: none;">
@@ -142,46 +154,44 @@
               <p>LOVED ONES ARE OUT OF REACH AND SOME THOUGHTS ARE HARD TO SAY. THANK HEAVENS FOR FLORIOGRAPHY AND BOUQUETS FULL OF MEANING PENHALIGON’S INVITES YOU TO SEND A COMPLIMENTARY GIFT AND A DIGITAL FLORAL BOUQUET, TO A LOVED ONE WHO FEELS OH SO FAR AWAY.</p>
               <button id="email_content_selected" onclick="content_selector(this.id)" type="button"><span>Enter</span></button>
           </div>
-          <img class="enter_site_element1" src = "{{url_for('static', filename='IMG/EMAIL/INTROL/email_entersite1.png')}}">
-          <img class="enter_site_element2" src = "{{url_for('static', filename='IMG/RANDOMS/INTROL/random_entersite2.png')}}">
-          <img class="enter_site_element3" src = "{{url_for('static', filename='IMG/RANDOMS/INTROL/random_entersite3.png')}}">
-          <img class="enter_site_element4" src = "{{url_for('static', filename='IMG/RANDOMS/INTROL/random_entersite4.png')}}">
-          <img class="enter_site_element5" src = "{{url_for('static', filename='IMG/RANDOMS/INTROL/random_entersite7.png')}}">
-          <img class="enter_site_element6" src = "{{url_for('static', filename='IMG/RANDOMS/INTROL/random_entersite8.png')}}">
-          <img class="enter_site_element7" src = "{{url_for('static', filename='IMG/RANDOMS/INTROL/random_entersite5.png')}}">
+          <img class="enter_site_element1" src = "../Project-PSCP/static/IMG/EMAIL/INTROL/email_entersite1.png">
+          <img class="enter_site_element2" src = "../Project-PSCP/static/IMG/RANDOMS/INTROL/random_entersite2.png">
+          <img class="enter_site_element3" src = "../Project-PSCP/static/IMG/RANDOMS/INTROL/random_entersite3.png">
+          <img class="enter_site_element4" src = "../Project-PSCP/static/IMG/RANDOMS/INTROL/random_entersite4.png">
+          <img class="enter_site_element5" src = "../Project-PSCP/static/IMG/RANDOMS/INTROL/random_entersite7.png">
+          <img class="enter_site_element6" src = "../Project-PSCP/static/IMG/RANDOMS/INTROL/random_entersite8.png">
+          <img class="enter_site_element7" src = "../Project-PSCP/static/IMG/RANDOMS/INTROL/random_entersite5.png">
         </section>
 
       </section>
 
 
     <!--! Page: 1 Random flower -->
-    <section id="scroller_random_canvas" style="overflow: hidden; width: 100%; height: 100vh; position: relative; background-color: #ffffff; display: none;">
-      <section class="randoms_background">
+    <section id="scroller_random_canvas">
+      
           <!-- >                         -->
           <!-- >   Random Navbar Icon    -->
           <!-- >                         -->
-        <div class="randoms_canvas">
+        
 
-          <div id="random_submit_content" style="display: none;">
+          <!--! <div id="random_submit_content" style="display: none;">
             <div class="random_box">
               <form action="{{ url_for("homepage")}}" method="post">
               <input type="text" id="random_output" name="random_output" value="" style="display: none;">
-              <button onclick="random_flower_sumbit()" class="random_submit_input" name="get_randomInput" value="GET_RANDOM_INPUT">Submit . . </button>
+              <button onclick="random_flower_sumbit()" type="button" class="random_submit_input" name="get_randomInput" value="GET_RANDOM_INPUT">Submit . . </button>
               </form>
             </div>
-          </div>
+          </div> -->
           
           <div id="random_form_layout" class="random_form">
-              <div id="random_form_content" style="z-index: 11;">
-                <div class="random_box">
+              <div class="random_box">
                   <input placeholder="( You )" id="username" name="username" autocomplete="off" type="text">
-                  <button onclick="random_flower_button()" class="random_heart" ><i class="fa-solid fa-heart fa-6x"></i></button>
+                  <button onclick="random_flower_sumbit()" class="random_heart" ><i class="fa-solid fa-heart fa-6x"></i></button>
                   <input placeholder="( Who? )" id="receiver" name="receiver" autocomplete="off" type="text">
-                </div>
               </div>
+          </div>
 
-
-              <div id="random_colors_content"  style="z-index: 11; display: none;">
+              <!--! <div id="random_colors_content"  style="z-index: 11; display: none;">
                 <div class="random_content_box">
                   <h2>Select your colors</h2>
                   <button id="white" onclick="random_get_colors(this.id)" name="random_colors_submit" value="GET_SUMBIT"><i style="color: rgb(251, 234, 234);" class="fa-solid fa-circle fa-3x"></i></button>
@@ -199,33 +209,33 @@
                   <button id="autumn" onclick="random_get_seasons(this.id)" name="random_seasons_submit" value="GET_SUMBIT"><h3>Autumn</h3></button>
                   <button id="winter" onclick="random_get_seasons(this.id)" name="random_seasons_submit" value="GET_SUMBIT"><h3>Winter</h3></button>
                 </div>
-              </div>
+              </div> -->
               
 
-            </div>
+
+              
+
+            
 
           <div id="random_result_layout" class="random_smll_content" style="display: none;">
             <div id="random_bg_img" class="random_smll_frame">
-              <img id="random_smll_img" src = "{{url_for('static', filename='IMG/RANDOMS/random_sunflower_smll.png')}}">
+              <img id="random_smll_img" src = "../Project-PSCP/static/IMG/RANDOMS/random_sunflower_smll.png">
               <div class="random_smll_text">
-                <div style="margin-top: 1.3em; column-gap: 1vh; grid-template-columns: 8vh 8vh 8vh; display: flex; -webkit-flex-direction: row; flex-direction: row; -webkit-align-items: center; align-items: center; -webkit-justify-content: center; justify-content: center;" >
-                  <h1 id="random_en" >Sunflower </h1><p id="random_th">ดอกทานตะวัน</p>
+                <div style="margin-top: 1.3em; column-gap: 1vh; grid-template-columns: 8vh 8vh 8vh; display: flex; flex-direction: column; -webkit-align-items: center; align-items: center; -webkit-justify-content: center; justify-content: center;" >
+                  <h1 id="random_en" >Sunflower </h1>
+                  <p id="random_th">ดอกทานตะวัน</p>
                 </div>
                 <h2 id="random_meaning">Adoration</h1>
                 <h3 id="random_submeaning">deep love and respect</h2>
               </div>
             </div>
 
-            <form action="{{ url_for("homepage")}}" method="post">
-              <div class="random_IconWrapper">
-                <a id="" onclick="random_flower_back()"><div class="icon"><span><i class="fa-solid fa-chevron-left"></i></span></div></a>
-                <button onclick="random_flower_repeated()" name="random_flower_repeat" value="REPEAT" id="myRandomButton" class="button button1"><a><div class="icon"><span><i class="fa-solid fa-arrows-rotate"></i></span></div></a>  </button>
-                <a id="" ><div class="icon"><span><i class="fa-regular fa-bookmark"></i></span></div></a>
-              </div>
-            </form>
+            
+            
+          
           </div>
-        </div>
-      </section>
+        
+      
     </section>
     <!-- > End Random flowers -->
 
@@ -251,14 +261,14 @@
           <!-- >                           -->
           <div style="z-index: -1;" id="bouquet_custom_canvas">
               <!--| main flowers -->
-              <img style="z-index: 3;" id="main_flowers" src = "{{url_for('static', filename='IMG/BOUQUET/bouquet_main_hydengea.png')}}">
+              <img style="z-index: 3;" id="main_flowers" src = "../Project-PSCP/static/IMG/BOUQUET/bouquet_main_hydengea.png">
               <!--| main&minor decoration -->
-              <img style="z-index: 3;" class="bouquet_main_leaves bouquet_leavesSelect Bouquet_minor_eucalyptus" src = "{{url_for('static', filename='IMG/BOUQUET/Bouquet_minor_eucalyptus.png')}}">
+              <img style="z-index: 3;" class="bouquet_main_leaves bouquet_leavesSelect Bouquet_minor_eucalyptus" src = "../Project-PSCP/static/IMG/BOUQUET/Bouquet_minor_eucalyptus.png">
               <img style="z-index: 3;" class="bouquet_main_leaves" src = "">
               <img style="z-index: 3;" class="bouquet_main_leaves" src = "">
               <!--| main wrappers -->
-              <img style="z-index: 1;" id="bouquet_main_wrappers" src = "{{url_for('static', filename='IMG/BOUQUET/wrappers_default_main.png')}}">
-              <img style="z-index: 4;" id="bouquet_minor_wrappers" src = "{{url_for('static', filename='IMG/BOUQUET/wrappers_default_minor.png')}}">
+              <img style="z-index: 1;" id="bouquet_main_wrappers" src = "../Project-PSCP/static/IMG/BOUQUET/wrappers_default_main.png">
+              <img style="z-index: 4;" id="bouquet_minor_wrappers" src = "../Project-PSCP/static/IMG/BOUQUET/wrappers_default_minor.png">
             </div>
           
           <div class="bouquet_content">
@@ -269,9 +279,9 @@
               <div class="bouquet_flowers">
                 <h1>Type</h1>
                 <div class="wrapper">
-                  <div><img id="bouquet_main_hydengea" class="flower_active" onclick="bouquet_flowers(this.id)" src = "{{url_for('static', filename='IMG/BOUQUET/Bouquet_main_hydengea_icon.png')}}"><h2>hydengea</h2></div>
-                  <div><img id="bouquet_main_sunflower" class="" onclick="bouquet_flowers(this.id)" src = "{{url_for('static', filename='IMG/BOUQUET/bouquet_main_sunflower_icon.png')}}"><h2>sunflower</h2></div>
-                  <div><img id="bouquet_main_lisianthus" class="" onclick="bouquet_flowers(this.id)" src = "{{url_for('static', filename='IMG/BOUQUET/bouquet_main_lisianthus_icon.png')}}"><h2>lisianthus3</h2></div>
+                  <div><img id="bouquet_main_hydengea" class="flower_active" onclick="bouquet_flowers(this.id)" src = "../Project-PSCP/static/IMG/BOUQUET/Bouquet_main_hydengea_icon.png"><h2>hydengea</h2>
+                  <div><img id="bouquet_main_sunflower" class="" onclick="bouquet_flowers(this.id)" src = "../Project-PSCP/static/IMG/BOUQUET/bouquet_main_sunflower_icon.png"><h2>sunflower</h2>
+                  <div><img id="bouquet_main_lisianthus" class="" onclick="bouquet_flowers(this.id)" src = "../Project-PSCP/static/IMG/BOUQUET/bouquet_main_lisianthus_icon.png"><h2>lisianthus3</h2>
                 </div>
               </div>
   
@@ -316,17 +326,17 @@
               <div class="bouquet_flowers">
                 <h1>Type</h1>
                 <div class="wrapper">
-                  <div><img id="Bouquet_minor_eucalyptus" class="leaves_icons leaves_active" onclick="bouquet_leaves(this.id)" src = "{{url_for('static', filename='IMG/BOUQUET/Bouquet_minor_eucalyptus_icon.png')}}"><h2>Eucalyptus</h2></div>
-                  <div><img id="Bouquet_minor_ginkgo" class="leaves_icons" onclick="bouquet_leaves(this.id)" src = "{{url_for('static', filename='IMG/BOUQUET/Bouquet_minor_ginkgo_icon.png')}}"><h2>Ginkgo</h2></div>
-                  <div><img id="Bouquet_minor_babys_breath" class="leaves_icons" onclick="bouquet_leaves(this.id)" src = "{{url_for('static', filename='IMG/BOUQUET/Bouquet_minor_babys_breath_icon.png')}}"><h2>baby's breath</h2></div>
+                  <div><img id="Bouquet_minor_eucalyptus" class="leaves_icons leaves_active" onclick="bouquet_leaves(this.id)" src = "../Project-PSCP/static/IMG/BOUQUET/Bouquet_minor_eucalyptus_icon.png"><h2>Eucalyptus</h2>
+                  <div><img id="Bouquet_minor_ginkgo" class="leaves_icons" onclick="bouquet_leaves(this.id)" src = "../Project-PSCP/static/IMG/BOUQUET/Bouquet_minor_ginkgo_icon.png"><h2>Ginkgo</h2>
+                  <div><img id="Bouquet_minor_babys_breath" class="leaves_icons" onclick="bouquet_leaves(this.id)" src = "../Project-PSCP/static/IMG/BOUQUET/Bouquet_minor_babys_breath_icon.png"><h2>baby's breath</h2>
 
-                  <div><img id="Bouquet_minor_sweet_pea" class="leaves_icons" onclick="bouquet_leaves(this.id)" src = "{{url_for('static', filename='IMG/BOUQUET/Bouquet_minor_sweet_pea_icon.png')}}"><h2>Sweet pea</h2></div>
-                  <div><img id="Bouquet_minor_pascu" class="leaves_icons" onclick="bouquet_leaves(this.id)" src = "{{url_for('static', filename='IMG/BOUQUET/Bouquet_minor_pascu_icon.png')}}"><h2>Pascu</h2></div>
-                  <div><img id="Bouquet_minor_cosmos" class="leaves_icons" onclick="bouquet_leaves(this.id)" src = "{{url_for('static', filename='IMG/BOUQUET/Bouquet_minor_cosmos_icon.png')}}"><h2>Cosmos</h2></div>
+                  <div><img id="Bouquet_minor_sweet_pea" class="leaves_icons" onclick="bouquet_leaves(this.id)" src = "../Project-PSCP/static/IMG/BOUQUET/Bouquet_minor_sweet_pea_icon.png"><h2>Sweet pea</h2>
+                  <div><img id="Bouquet_minor_pascu" class="leaves_icons" onclick="bouquet_leaves(this.id)" src = "../Project-PSCP/static/IMG/BOUQUET/Bouquet_minor_pascu_icon.png"><h2>Pascu</h2>
+                  <div><img id="Bouquet_minor_cosmos" class="leaves_icons" onclick="bouquet_leaves(this.id)" src = "../Project-PSCP/static/IMG/BOUQUET/Bouquet_minor_cosmos_icon.png"><h2>Cosmos</h2>
 
-                  <div><img id="Bouquet_minor_dogwood" class="leaves_icons" onclick="bouquet_leaves(this.id)" src = "{{url_for('static', filename='IMG/BOUQUET/Bouquet_minor_dogwood_icon.png')}}"><h2>Dogwood</h2></div>
-                  <div><img id="Bouquet_minor_cherry_blossoms" class="leaves_icons" onclick="bouquet_leaves(this.id)" src = "{{url_for('static', filename='IMG/BOUQUET/Bouquet_minor_cherry_blossoms_icon.png')}}"><h2>Cherry blossoms</h2></div>
-                  <div><img id="Bouquet_minor_lupin" class="leaves_icons" onclick="bouquet_leaves(this.id)" src = "{{url_for('static', filename='IMG/BOUQUET/Bouquet_minor_lupin_icon.png')}}"><h2>Lupin</h2></div>
+                  <div><img id="Bouquet_minor_dogwood" class="leaves_icons" onclick="bouquet_leaves(this.id)" src = "../Project-PSCP/static/IMG/BOUQUET/Bouquet_minor_dogwood_icon.png"><h2>Dogwood</h2>
+                  <div><img id="Bouquet_minor_cherry_blossoms" class="leaves_icons" onclick="bouquet_leaves(this.id)" src = "../Project-PSCP/static/IMG/BOUQUET/Bouquet_minor_cherry_blossoms_icon.png"><h2>Cherry blossoms</h2>
+                  <div><img id="Bouquet_minor_lupin" class="leaves_icons" onclick="bouquet_leaves(this.id)" src = "../Project-PSCP/static/IMG/BOUQUET/Bouquet_minor_lupin_icon.png"><h2>Lupin</h2>
   
                 </div>
               </div>
@@ -350,9 +360,9 @@
     
                   <h1>Type</h1>
                   <div class="wrapper">
-                    <div><img id="wrappers_default" class="wrappers_active" onclick="bouquet_wrappers(this.id)" src = "{{url_for('static', filename='IMG/BOUQUET/wrappers_default_icons.png')}}"><h2>Default</h2></div>
-                    <div><img id="wrappers_newspaper" class="" onclick="bouquet_wrappers(this.id)" src = "{{url_for('static', filename='IMG/BOUQUET/wrappers_newspaper_icons.png')}}"><h2>Newspaper</h2></div>
-                    <div><img id="wrappers_organic" class="" onclick="bouquet_wrappers(this.id)" src = "{{url_for('static', filename='IMG/BOUQUET/wrappers_organic_icons.png')}}"><h2>Organic</h2></div>
+                    <div><img id="wrappers_default" class="wrappers_active" onclick="bouquet_wrappers(this.id)" src = "../Project-PSCP/static/IMG/BOUQUET/wrappers_default_icons.png"><h2>Default</h2>
+                    <div><img id="wrappers_newspaper" class="" onclick="bouquet_wrappers(this.id)" src = "../Project-PSCP/static/IMG/BOUQUET/wrappers_newspaper_icons.png"><h2>Newspaper</h2>
+                    <div><img id="wrappers_organic" class="" onclick="bouquet_wrappers(this.id)" src = "../Project-PSCP/static/IMG/BOUQUET/wrappers_organic_icons.png"><h2>Organic</h2>
                   </div>
                 </div>
 
@@ -382,9 +392,9 @@
           <div class="bouquet_items">
             <h1>Selected Items</h1>
             <div id="bouquet_items_boxs" class="collum">
-              <div><div class="box"><div id="items_main_flowers" class="insidebox"><img src = "{{url_for('static', filename='IMG/BOUQUET/Bouquet_main_hydengea_icon.png')}}"><p1><p>Name: Hydengea</p> <p>Qlt: 1</p><p2 id="price">899 bath</p2></p1></div></div></div>
-              <div id="Bouquet_minor_eucalyptus items_main_leaves"><div class="box"><div class="insidebox"><img src= "{{url_for('static', filename='IMG/BOUQUET/Bouquet_minor_eucalyptus_icon.png')}}"><p1><p>Name: eucalyptus</p> <p>Qlt: 1</p><p2 id="price">149 bath</p2></p1></div></div></div>
-              <div><div class="box"><div id="items_main_wrappers" class="insidebox"><img src = "{{url_for('static', filename='IMG/BOUQUET/wrappers_default_icons.png')}}"><p1><p>Name: Default</p> <p>Qlt: 1</p><p2 id="price">120 bath</p2></p1></div></div></div>
+              <div><div class="box"><div id="items_main_flowers" class="insidebox"><img src = "../Project-PSCP/static/IMG/BOUQUET/Bouquet_main_hydengea_icon.png"><p1><p>Name: Hydengea</p> <p>Qlt: 1</p><p2 id="price">899 bath</p2></p1></div></div>
+              <div id="Bouquet_minor_eucalyptus items_main_leaves"><div class="box"><div class="insidebox"><img src= "../Project-PSCP/static/IMG/BOUQUET/Bouquet_minor_eucalyptus_icon.png"><p1><p>Name: eucalyptus</p> <p>Qlt: 1</p><p2 id="price">149 bath</p2></p1></div></div>
+              <div><div class="box"><div id="items_main_wrappers" class="insidebox"><img src = "../Project-PSCP/static/IMG/BOUQUET/wrappers_default_icons.png"><p1><p>Name: Default</p> <p>Qlt: 1</p><p2 id="price">120 bath</p2></p1></div></div>
             </div>
           </div>
 
@@ -392,7 +402,7 @@
         </div>
       </section>
     </section>
-    <!-- > end -- Custom Bouquet -->
+    <!-- Custom Bouquet -->
 
 
     <!--! Page: 3 Emails flower -->
@@ -408,25 +418,19 @@
           
           <div class="email_form_collum"> 
             <div id="recipient" class="person-details">
-              <form action="{{ url_for("homepage")}}" method="post">
+              <form id="email-form" onsubmit="event.preventDefault(); sendFlowerEmail();">
                 <header>
                   <h1>Their details</h1>
                 </header>
-                <label for="name">
-                  Recipient
-                  full name
-                </label>
+                <label for="name">Recipient full name</label>
                 <input type="text" id="username_arrias" name="username_arrias" value="" class="recipient" maxlength="20"  placeholder="Full Name" required="" autocomplete="off" tabindex="1">
-                <label for="email">
-                  Recipient
-                  email
-                </label>
+                <label for="email">Recipient email</label>
                 <input type="email" id="email_receiver" name="email_receiver" value="" class="recipient" placeholder="Email" required="">
-                <p class="terms">By providing details of the recipient you confirm they can be contacted.</p>
                 
+                <p class="terms">By providing details of the recipient you confirm they can be contacted.</p>
                 <textarea type="textarea" id="user_message" name="user_message" class="recipient" placeholder="Your Message (don’t be shy)"></textarea>
                 <input type="text" id="email_flowers" name="email_flowers" value="" style="display: none;">
-                <button name="custom_email_submit" value="GET_EMAIL" id="myRandomButton" class="button button1"> Submit</button>
+                <button type="submit" class="button button1"> Submit</button>
               </form>
             </div>
           </div>
@@ -435,19 +439,19 @@
             <div class="emails_flowers">
               <h1>choose your flowers</h1>
               <div class="wrapper">
-                <div><img id="hibiscus" class=" emails_active" onclick="bouquet_email_selected(this.id)" src="/static/IMG/EMAIL/email_hibiscus_icon.png"><h2>Hibiscus</h2></div>
-                <div><img id="hydrangea" class="" onclick="bouquet_email_selected(this.id)" src="/static/IMG/EMAIL/email_hydrangea_icon.png"><h2>Hydrangea</h2></div>
-                <div><img id="iris" class="" onclick="bouquet_email_selected(this.id)" src="/static/IMG/EMAIL/email_iris_icon.png"><h2>Iris</h2></div>
+                <div><img id="hibiscus" class=" emails_active" onclick="bouquet_email_selected(this.id)" src="../Project-PSCP/static/IMG/EMAIL/email_hibiscus_icon.png"><h2>Hibiscus</h2></div>
+                <div><img id="hydrangea" class="" onclick="bouquet_email_selected(this.id)" src="../Project-PSCP/static/IMG/EMAIL/email_hydrangea_icon.png"><h2>Hydrangea</h2></div>
+                <div><img id="iris" class="" onclick="bouquet_email_selected(this.id)" src="../Project-PSCP/static/IMG/EMAIL/email_iris_icon.png"><h2>Iris</h2></div>
 
-                <div><img id="lily" class="" onclick="bouquet_email_selected(this.id)" src="/static/IMG/EMAIL/email_lily_icon.png"><h2>Lily</h2></div>
-                <div><img id="orchid" class="" onclick="bouquet_email_selected(this.id)" src="/static/IMG/EMAIL/email_orchid_icon.png"><h2>Orchid</h2></div>
-                <div><img id="rose" class="" onclick="bouquet_email_selected(this.id)" src="/static/IMG/EMAIL/email_rose_icon.png"><h2>Rose</h2></div>
+                <div><img id="lily" class="" onclick="bouquet_email_selected(this.id)" src="../Project-PSCP/static/IMG/EMAIL/email_lily_icon.png"><h2>Lily</h2></div>
+                <div><img id="orchid" class="" onclick="bouquet_email_selected(this.id)" src="../Project-PSCP/static/IMG/EMAIL/email_orchid_icon.png"><h2>Orchid</h2></div>
+                <div><img id="rose" class="" onclick="bouquet_email_selected(this.id)" src="../Project-PSCP/static/IMG/EMAIL/email_rose_icon.png"><h2>Rose</h2></div>
               </div>
             </div>
           </div>
 
-          <div class="">
-            <img id="email_flowers_bg_icon" class="emails_flowers_select" onclick="bouquet_leaves(this.id)" src="/static/IMG/EMAIL/email_hibiscus_icon.png">
+          <div class="emails_flowers_select">
+            <img id="email_flowers_bg_icon" class="" onclick="bouquet_leaves(this.id)" src="../Project-PSCP/static/IMG/EMAIL/email_hibiscus_icon.png">
           </div>
           
         
@@ -469,14 +473,14 @@
     
 
     <!-- Script Files -->
-    <script src="{{url_for('static', filename='JS/ENTER.js')}}"></script>
-    <script src="{{url_for('static', filename='JS/ANIMATED.js')}}"></script>
-    <script src="{{url_for('static', filename='JS/BOUQUETpage.js')}}"></script>
-
+    <script src="../Project-PSCP/static/JS/ENTER.js"></script>
+    <script src="../Project-PSCP/static/JS/ANIMATED.js"></script>
+    <script src="../Project-PSCP/static/JS/BOUQUETpage.js"></script>
+    <script src="../Project-PSCP/static/JS/LOADING.js"></script>
     <!-- Random flowers Files -->
-    <script src="{{url_for('static', filename='JS/RANDOMpage.js')}}"></script>
-    <script src="{{url_for('static', filename='JS/capture.js')}}"></script>
+    <script src="../Project-PSCP/static/JS/RANDOMpage.js"></script>
     <!-- Custom Email File -->
-    <script src="{{url_for('static', filename='JS/BOUQUETemail.js')}}"></script>
+    <script src="../Project-PSCP/static/JS/BOUQUETemail.js"></script>
+    <script src="../Project-PSCP/static/JS/EMAIL_SERVICE.js"></script>
 </body>
 </html> 

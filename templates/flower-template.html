@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banndokmai Newsletter</title>
+    <style type="text/css">
+        /* Reset styles */
+        body, table, td, div, p, a {
+            margin: 0;
+            padding: 0;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        /* Base styles */
+        body {
+            font-family: 'Helvetica', Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Container styles */
+        .email-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* Card styles */
+        .card {
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        /* Header styles */
+        .header {
+            background: linear-gradient(135deg, #ffd6e7, #c8e7ff);
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 120px;
+            max-width: 180px;
+            height: auto;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        /* Content styles */
+        .content {
+            padding: 30px;
+            background: #ffffff;
+        }
+
+        h1 {
+            color: #333333;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        p {
+            color: #666666;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Footer styles */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            color: #999999;
+            font-size: 14px;
+        }
+
+        /* Flower decoration */
+        .flower-decoration {
+            position: absolute;
+            width: 60px;
+            height: auto;
+            opacity: 0.2;
+        }
+
+        .flower-top-right {
+            top: 20px;
+            right: 20px;
+            transform: rotate(45deg);
+        }
+
+        .flower-bottom-left {
+            bottom: 20px;
+            left: 20px;
+            transform: rotate(-45deg);
+        }
+
+        /* Mobile responsive */
+        @media screen and (max-width: 600px) {
+            .email-container {
+                width: 90% !important;
+                padding: 10px !important;
+            }
+
+            .content {
+                padding: 20px !important;
+            }
+
+            h1 {
+                font-size: 20px !important;
+            }
+
+            p {
+                font-size: 14px !important;
+            }
+
+            .flower-decoration {
+                width: 40px !important;
+            }
+        }
+
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #2d2d2d !important;
+            }
+
+            .card {
+                background: #333333 !important;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3) !important;
+            }
+
+            .content {
+                background: #333333 !important;
+            }
+
+            h1 {
+                color: #ffffff !important;
+            }
+
+            p {
+                color: #dddddd !important;
+            }
+
+            .footer {
+                background: #2d2d2d !important;
+                color: #888888 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="card">
+            <!-- Header with gradient background -->
+            <div class="header">
+                <img class="logo" 
+                     alt="Banndokmai Logo" 
+                     src="https://raw.githubusercontent.com/MaledKhaoSan/Project-PSCP/main/static/IMG/EMAIL/email_{{flower_type}}_icon.png">
+            </div>
+
+            <!-- Main content -->
+            <div class="content">
+                <!-- Decorative flowers -->
+                <img class="flower-decoration flower-top-right" 
+                     src="https://raw.githubusercontent.com/MaledKhaoSan/Project-PSCP/main/static/IMG/EMAIL/email_{{flower_type}}_icon.png">
+                <img class="flower-decoration flower-bottom-left" 
+                     src="https://raw.githubusercontent.com/MaledKhaoSan/Project-PSCP/main/static/IMG/EMAIL/email_{{flower_type}}_icon.png">
+
+                <h1>Message from {{from_name}}</h1>
+                <p>{{message}}</p>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <p>Sent with 🌸 from Banndokmai</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -15,7 +15,7 @@ random_flower_dataset = {
     'spring': {
         1:['Carnation', 'ดอกคาร์เนชั่น', 'Never forgetting', 'The concept of never forgetting someone', 'color' ],
         2:['Dahlia', 'ดอกรักเร่', 'Kindness', 'being generous, helpful, and caring about other people', 'color' ],
-        3:['Forget-me-nots', 'ดอกอย่าลืมฉัน', 'Please do not forget me', 'telling someone you love not to forget the memories between us', 'color' ],
+        3:['Forgetmenots', 'ดอกอย่าลืมฉัน', 'Please do not forget me', 'telling someone you love not to forget the memories between us', 'color' ],
         4:['Jasmine', 'ดอกมะลิ', 'Amiability', 'Warmth and the deepest friend ship', 'color' ],
         5:['Lily', 'ดอกลิลลี่', 'Purity', 'freedom from adulteration or contamination', 'color' ],
         6:['Orchid', 'ดอกกล้วยไม้', 'Thoughtfulness', `being kind and thinking about other people's needs`, 'color' ],
@@ -26,9 +26,9 @@ random_flower_dataset = {
         1:['Amaranth', 'ดอกบานไม่รู้โรย', 'Eternal life', 'life without beginning or end', 'color' ],
         2:['Chrysanthemum', 'ดอกเบญจมาศ', 'Friendship', 'enduring affection, esteem, intimacy, and trust between two people', 'color' ],
         3:['Iris', 'ดอกไอริส', 'Valor', 'strength of mind or spirit that enables a person to encounter danger with firmness', 'color' ],
-        4:[' Marigold', 'ดอกดาวเรือง', 'despaired love', 'losing someone you love', 'color' ],
+        4:['Marigold', 'ดอกดาวเรือง', 'despaired love', 'losing someone you love', 'color' ],
         5:['Moonflower', 'ดอกชมจันทร์', 'Hidden beauty', 'the beauty that comes out of darkness', 'color' ],
-        6:['Spider Lily', 'ดอกพลับพลึงแดง', 'Truth', 'adherence to reality, or an indisputable fact', 'color' ],
+        6:['Spiderlily', 'ดอกพลับพลึงแดง', 'Truth', 'adherence to reality, or an indisputable fact', 'color' ],
         7:['Sunflower', 'ดอกทานตะวัน', 'Adoration', 'deep love and respect', 'color' ]
       },
       'winter': {
@@ -47,65 +47,27 @@ $('.random_box input').hover(
   function(){ $(this).removeClass('random_invalid_check') }
 )
 
+function random_flower_sumbit() {
+  // สุ่มฤดูกาล (season)
+  const seasons = Object.keys(random_flower_dataset);
+  const randomSeason = seasons[Math.floor(Math.random() * seasons.length)]
+  const flowerNumbers = Object.keys(random_flower_dataset[randomSeason]);
+  const randomNumber = flowerNumbers[Math.floor(Math.random() * flowerNumbers.length)];
+  const flowerData = random_flower_dataset[randomSeason][randomNumber];
+  
+  // อัพเดท UI
+  document.getElementById('random_smll_img').src = `../static/IMG/RANDOMS/random_${flowerData[0].toLowerCase()}_smll.png`;
+  document.getElementById('random_bg_img').style.backgroundImage = `url('../static/IMG/RANDOMS/random_${flowerData[0].toLowerCase()}_bg.png')`; 
+  document.getElementById('random_en').innerHTML = flowerData[0];
+  document.getElementById('random_th').innerHTML = flowerData[1];
+  document.getElementById('random_meaning').innerHTML = flowerData[2];
+  document.getElementById('random_submeaning').innerHTML = flowerData[3];
 
-getColors = String()
-getSeasons = String()
-
-function random_flower_button() {
-  username_input = document.getElementById("username").value.replaceAll(/\s/g,'')
-  receiver_input = document.getElementById("receiver").value.replaceAll(/\s/g,'')
-  if (username_input == null || username_input == "", receiver_input == null || receiver_input == "") {
-    $('.random_box input').addClass('random_invalid_check');
-  }
-  else{
-    $("#random_form_content").fadeOut();
-    setTimeout(function(){
-      $("#random_colors_content").fadeIn("slow");
-    },400)
-  }
-}
-function random_get_colors(id){
-  getColors = id
-  $("#random_colors_content").fadeOut();
-    setTimeout(function(){
-      $("#random_seasons_content").fadeIn("slow");
-    },400)
-}
-
-function random_get_seasons(id){
-  getSeasons = id
-  $("#random_seasons_content").fadeOut();
-    setTimeout(function(){
-      $("#random_submit_content").fadeIn("slow");
-    },400)
-  document.getElementById("random_output").value = `${username_input} ${receiver_input} ${getColors} ${getSeasons} `;
-}
-
-
-function random_flower_sumbit(){
-  let jsondata;
-  fetch("./static/JSON/text.json").then(
-    function(u){ return u.json();}
-  ).then(
-    function(json){
-      jsondata = json;
-      console.log(jsondata)
-
-      document.getElementById('random_smll_img').src = `./static/IMG/RANDOMS/random_${jsondata[0].toLowerCase()}_smll.png`;
-      document.getElementById('random_bg_img').style.backgroundImage = `url('./static/IMG/RANDOMS/random_${jsondata[0].toLowerCase()}_bg.png')`; 
-      document.getElementById('random_en').innerHTML = ` ${jsondata[0]}`
-      document.getElementById('random_th').innerHTML = `${jsondata[1]}`
-      document.getElementById('random_meaning').innerHTML = `${jsondata[2]}`
-      document.getElementById('random_submeaning').innerHTML = `${jsondata[3]}`
-    }
-  )
-  $("#random_submit_content").fadeOut();
+  $("#random_form_layout").fadeOut();
   setTimeout(function(){
     $("#random_result_layout").fadeIn("slow");
   },400)
-
 }
-
 
 
 
@@ -118,19 +80,25 @@ function random_flower_back() {
 
 
 function random_flower_repeated() {
-  fetch("./static/JSON/text.json").then(
-    function(u){ return u.json();}
-  ).then(
-    function(json){
-      jsondata = json;
-      console.log(jsondata)
-
-      document.getElementById('random_smll_img').src = `./static/IMG/RANDOMS/random_${jsondata[0].toLowerCase()}_smll.png`;
-      document.getElementById('random_bg_img').style.backgroundImage = `url('./static/IMG/RANDOMS/random_${jsondata[0].toLowerCase()}_bg.png')`; 
-      document.getElementById('random_en').innerHTML = ` ${jsondata[0]}`
-      document.getElementById('random_th').innerHTML = `${jsondata[1]}`
-      document.getElementById('random_meaning').innerHTML = `${jsondata[2]}`
-      document.getElementById('random_submeaning').innerHTML = `${jsondata[3]}`
-    }
-  )
+  // สุ่มฤดูกาล (season)
+  const seasons = Object.keys(random_flower_dataset);
+  const randomSeason = seasons[Math.floor(Math.random() * seasons.length)];
+  
+  // สุ่มดอกไม้ในฤดูกาลนั้น (flower number)
+  const flowerNumbers = Object.keys(random_flower_dataset[randomSeason]);
+  const randomNumber = flowerNumbers[Math.floor(Math.random() * flowerNumbers.length)];
+  
+  // ดึงข้อมูลดอกไม้
+  const flowerData = random_flower_dataset[randomSeason][randomNumber];
+  
+  // อัพเดท UI โดยตรง
+  document.getElementById('random_smll_img').src = `../static/IMG/RANDOMS/random_${flowerData[0].toLowerCase()}_smll.png`;
+  document.getElementById('random_bg_img').style.backgroundImage = `url('../static/IMG/RANDOMS/random_${flowerData[0].toLowerCase()}_bg.png')`; 
+  document.getElementById('random_en').innerHTML = ` ${flowerData[0]}`;
+  document.getElementById('random_th').innerHTML = `${flowerData[1]}`;
+  document.getElementById('random_meaning').innerHTML = `${flowerData[2]}`;
+  document.getElementById('random_submeaning').innerHTML = `${flowerData[3]}`;
+  
+  // Optional: แสดงผลใน console เพื่อดูว่าสุ่มได้อะไร
+  console.log(`Season: ${randomSeason}, Number: ${randomNumber}, Flower: ${flowerData[0]}`);
 }

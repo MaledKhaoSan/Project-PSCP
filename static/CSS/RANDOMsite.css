@@ -28,13 +28,20 @@
   border-width: 0.07em; */
   overflow: hidden;
   position: relative;
-  height: 90%;
-  align-items: center;
+  
+  /* align-items: center; */
   opacity: 1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  width: 90%;
+  /* top: 50%;
+  left: 50%; */
+  /* transform: translate(-50%,-50%); */
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: blueviolet;
   /* border-radius: 20px; */
 }
 
@@ -52,22 +59,18 @@
   
 }
 
-
-
-/* canvas */
-
-.random_form {
-  position: relative;
-  left: 50%;
-  top: 50%;
+#scroller_random_canvas{
+  overflow: hidden;
   width: 100%;
-  height: 100%;
-  transform: translate(-50%,-50%);
-  background-color: #ffffff;
-  z-index: 5;
+  height: 100vh;
+  position: relative;
+  background-color: white;
+  display: none;
+  margin-top: auto;
 }
 
 
+/* canvas */
 .entersite_subheading{
   opacity: 0;
   z-index: 30;
@@ -122,39 +125,25 @@
   justify-content: center;
 }
 
-
-    .random_form div{
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      width: 100%;
-      height: 100%;
-      transform: translate(-50%,-50%);
-      z-index: 5;
-    }
-            
             .random_heart {
               display: flex;
               background-color:rgba(255, 255, 255, 0);
               border: rgba(255, 255, 255, 0) solid;
               justify-content: center;
               color: rgb(246, 98, 123);
-
-              margin: auto;
-              /* position: absolute; */
-              left: 50%;
-              top: 50%;
+              padding: 0;
               width: 100%;
-              /* transform: translate(-50%,-50%); */
             }
-
-            .random_box {
-              vertical-align: center;
-              position: relative;
-              left: 50%;
-              top: 50%;
+            .random_box{
+              flex: 1;
+              display: flex;
+              align-items: center;
+              justify-content: space-evenly;
+              flex-direction: column;
               width: 100%;
-              transform: translate(-50%,-50%);
+              height: 100vh;
+              background-color: #ffffff;
+              z-index: 5;
             }
 
             .random_box input{
@@ -208,14 +197,15 @@
                         
                       }
                       
-                      .random_form  div input{
+                      .random_form div input{
                           font-family: "GalleryModern";
                           font-size: 6.6rem;
                           font-weight: 100px;
                           text-align: center;
                           color: rgb(0, 0, 0);
                           left: auto;
-                          margin: 8rem 0 6.2rem 0;
+                          width: 100%;
+                          height: 200px;
                           outline: none;
                       }
 
@@ -228,25 +218,8 @@
                         left: auto;
                         margin: 2rem 0 6.2rem 0;
                     }
-              .random_content_box, .random_box{
-                vertical-align: center;
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                width: 100%;
-                transform: translate(-50%,-50%);
-              }
-              .random_content_box, .random_box {
-                row-gap: 5vh;
-                display: inline-flex;
-                flex-direction: column;
-                position: absolute;
-                align-content: center;
-                top: 45%;
-                left: 50%;
-                padding-left: 4vh;
-                transform: translate(-50%,-50%);
-              }
+              
+              
               .random_content_box button{
                 background-color: #00000000;
                 border: #00000000 solid;
@@ -294,12 +267,9 @@
 
             
 .random_smll_content {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 45vh;
-  height: 101%;
-  transform: translate(-50%,-50%);
+  margin: auto;
+  margin-top: 3em;
+  margin-bottom: 3em;
 }
     .random_smll_content img{
       position: absolute;
@@ -387,10 +357,13 @@
     z-index: -1;
 }
 .random_IconWrapper {
+  padding-left: 5em;
+  padding-right: 5em;
+
   position: absolute;
   border-top: #1f1f1f solid;
   border-width: 0.07em;
-  padding: 1em 0 1em ;
+  
   background-color: #ffffff;
 
   
@@ -407,6 +380,7 @@
   align-items: center;
   -webkit-justify-content: center;
   justify-content: center;
+  margin-bottom: 3em;
 }
 
       .random_IconWrapper a,
@@ -423,7 +397,7 @@
                       .random_IconWrapper .icon span {
                         border: solid #1f1f1f;
                         border-width:  0.07em;
-                        display: block;
+                        display: flex;
                         height: 40px;
                         width: 40px;
                         background: #fff;
@@ -432,8 +406,10 @@
                         text-align: center;
                       }
                               .random_IconWrapper .icon span i {
-                                vertical-align: middle;
-                                height: 0em;
+                                flex: 1;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                                margin: auto;
                                 font-size: 1.5rem;
-          
                               }
