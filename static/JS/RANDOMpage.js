@@ -56,8 +56,8 @@ function random_flower_sumbit() {
   const flowerData = random_flower_dataset[randomSeason][randomNumber];
   
   // อัพเดท UI
-  document.getElementById('random_smll_img').src = `../Project-PSCP/static/IMG/RANDOMS/random_${flowerData[0].toLowerCase()}_smll.png`;
-  document.getElementById('random_bg_img').style.backgroundImage = `url('../Project-PSCP/static/IMG/RANDOMS/random_${flowerData[0].toLowerCase()}_bg.png')`; 
+  document.getElementById('random_smll_img').src = `/Project-PSCP/static/IMG/RANDOMS/random_${flowerData[0].toLowerCase()}_smll.png`;
+  document.getElementById('random_bg_img').style.backgroundImage = `url('/Project-PSCP/static/IMG/RANDOMS/random_${flowerData[0].toLowerCase()}_bg.png')`; 
   document.getElementById('random_en').innerHTML = flowerData[0];
   document.getElementById('random_th').innerHTML = flowerData[1];
   document.getElementById('random_meaning').innerHTML = flowerData[2];
@@ -92,8 +92,8 @@ function random_flower_repeated() {
   const flowerData = random_flower_dataset[randomSeason][randomNumber];
   
   // อัพเดท UI โดยตรง
-  document.getElementById('random_smll_img').src = `../Project-PSCP/static/IMG/RANDOMS/random_${flowerData[0].toLowerCase()}_smll.png`;
-  document.getElementById('random_bg_img').style.backgroundImage = `url('../Project-PSCP/static/IMG/RANDOMS/random_${flowerData[0].toLowerCase()}_bg.png')`; 
+  document.getElementById('random_smll_img').src = `/Project-PSCP/static/IMG/RANDOMS/random_${flowerData[0].toLowerCase()}_smll.png`;
+  document.getElementById('random_bg_img').style.backgroundImage = `url('/Project-PSCP/static/IMG/RANDOMS/random_${flowerData[0].toLowerCase()}_bg.png')`; 
   document.getElementById('random_en').innerHTML = ` ${flowerData[0]}`;
   document.getElementById('random_th').innerHTML = `${flowerData[1]}`;
   document.getElementById('random_meaning').innerHTML = `${flowerData[2]}`;
