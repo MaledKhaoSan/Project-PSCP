@@ -24,7 +24,7 @@ function bouquet_email_selected(id) {
     document.getElementById(id).classList.add("emails_active");
 
     //| เปลี่ยนรูปที่ custom emails canvas
-    email_flowers_bg_icon = `../static/IMG/EMAIL/email_${id}_icon.png`
+    email_flowers_bg_icon = `../Project-PSCP/static/IMG/EMAIL/email_${id}_icon.png`
     document.getElementById("email_flowers_bg_icon").src = email_flowers_bg_icon;
     //| เปลี่ยนค่า value flowers
     document.getElementById("email_flowers").value = `${id}`;
